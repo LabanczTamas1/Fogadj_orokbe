@@ -58,3 +58,31 @@ A mai világban a menhelyek gyakran hagyományos, elavult módszereket használn
 
 Az alkalmazásunk célja, hogy ezt a folyamatot teljesen új alapokra helyezze. Az általunk fejlesztett platform egy könnyen kezelhető, központi rendszert biztosít, amely lehetőséget nyújt a menhelyek számára, hogy digitálisan feltölthessék, frissíthessék és kezelhessék a kisállatok adatait, fotóit, valamint a lehetséges örökbefogadók egy modern, felhasználóbarát felületen keresztül böngészhessék az elérhető állatokat. Ez a rendszer nem csak csökkenti az adminisztrációs terheket, hanem megkönnyíti az örökbefogadók számára is a megfelelő kisállat kiválasztását és örökbefogadását, mindezt a mai technológiai lehetőségek kihasználásával.
 
+### 10. Fogalomtár
+
+#### PHP
+Egy szerveroldali szkriptnyelv, amelyet webes alkalmazások fejlesztéséhez használnak. A PHP feldolgozza a felhasználói kéréseket, dinamikus tartalmat hoz létre, és adatbázis-műveleteket hajt végre.
+
+#### JavaScript
+Kliensoldali programozási nyelv, amely interaktivitást és dinamikus viselkedést biztosít a weboldalon. Lehetővé teszi az elemek valós idejű frissítését, mint például űrlapok kezelése, animációk vagy felhasználói élmény javítása.
+
+#### Session
+A session (munkamenet) egy olyan állapotmegőrzési mechanizmus, amely lehetővé teszi, hogy a szerver adatokat tároljon egy adott felhasználóról a böngészési folyamat során. Az állat örökbefogadásra szolgáló oldal például session-t használhat, hogy megjegyezze a felhasználó által kiválasztott állatokat.
+
+#### CSS (Cascading Style Sheets)
+A CSS segítségével a weboldal megjelenését és stílusát határozzuk meg, például a színeket, betűtípusokat, elrendezést. A reszponzív felületek kialakításához is szükséges, hogy az oldal esztétikailag megfelelően jelenjen meg különböző eszközökön (mobil, tablet, PC).
+
+#### Reszponzív felület
+Olyan weboldal, amely alkalmazkodik a különböző képernyőméretekhez (mobil, tablet, PC), biztosítva, hogy a felület minden eszközön könnyen használható és jól megjelenő legyen.
+
+#### Adatbázis
+Az adatbázis a webalkalmazásban az állatok adatait, a felhasználói profilokat és az örökbefogadási kérelmeket tárolja. PHP segítségével kapcsolódik az adatbázishoz a dinamikus tartalom kiszolgálására.
+
+#### Űrlap
+Az űrlapok azok az elemek az oldalon, amelyeken keresztül a felhasználók adatokat küldhetnek be, például örökbefogadási kérelmet, regisztrációt vagy kapcsolatfelvételt. JavaScript és PHP segítségével az űrlapok validálása és feldolgozása történik.
+
+#### API
+Egy alkalmazás programozási felülete, amely lehetővé teszi a különböző szoftverek közötti kommunikációt. Weboldalunk egy külső API-t is használhat, például állatmenhelyek adatainak lekéréséhez.
+
+
+
