@@ -1,3 +1,32 @@
+# Funkcionális Specifikáció
+
+## 1. Áttekintés
+Az alkalmazás célja egy központosított felület létrehozása, ahol különböző állatmenhelyek saját profilokat hozhatnak létre, és regisztrálhatják a gondozásukban lévő állatokat.  
+Ezzel segítjük a menhelyek munkáját, növeljük az örökbefogadási esélyeket, és a leendő gazdik számára könnyebbé tesszük az örökbefogadás folyamatát.  
+A rendszer felhasználóbarát keresési funkcióval rendelkezik, így az örökbefogadók könnyen megtalálhatják a számukra megfelelő állatot.  
+Az alkalmazás elérhető lesz web platformon, így bárki, bárhonnan hozzáférhet az adatbázishoz.
+
+
+## 2. Jelenlegi helyzet
+Jelenleg a menhelyeknek nincs közös platformjuk, ahol állataikat egyszerűen bemutathatnák a nyilvánosság számára. Számos menhely saját weboldallal vagy közösségi média profillal próbálkozik, de ezek nem biztosítják az egységes hozzáférést és kereshetőséget.  
+A megrendelő célja egy olyan alkalmazás létrehozása, amely egy közös adatbázison keresztül lehetővé teszi, hogy az érdeklődők egyetlen felületen böngésszenek különböző menhelyek állatai között, illetve közvetlen kapcsolatba lépjenek a menhelyekkel az örökbefogadás ügyében.  
+Ezen felül a rendszer lehetőséget biztosít a menhelyeknek a saját logójuk/menhelyképük megjelenítésére és egyedi profiloldalak létrehozására.
+
+
+## 3. Követelménylista
+
+| Modul ID      | Név                        | Verzió | Kifejtés                                                                                                                                                                                                                                   |
+|---------------|-----------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Jogosultság M1 | Menhely regisztráció        | 1.0    | A menhelyek a nevük, e-mail címük és jelszavuk megadásával regisztrálhatnak. Amennyiben az adatok hiányosak vagy hibásak, a rendszer figyelmezteti a felhasználót.                                   |
+| Jogosultság M2 | Belépési felület            | 1.0    | A menhelyek, adminok és felhasználók beléphetnek az e-mail címük és jelszavuk megadásával. Hibás adatok esetén a felhasználó hibaüzenetet kap.                                                                     |
+| Jogosultság M3 | Jogosultsági szintek        | 1.0    | - **Admin:** új menhelyek jóváhagyása, felhasználók kezelése  <br> - **Menhely:** profil létrehozása, állatok feltöltése, adatok módosítása  <br> - **Vendég:** regisztráció és belépés, állatok keresése  |
+| Adatkezelés A1 | Menhely profil              | 1.0    | A menhelyek létrehozhatják profiljaikat, ahol bemutathatják magukat, feltölthetik logójukat, elérhetőségeiket és rövid leírást adhatnak magukról.                                                    |
+| Adatkezelés A2 | Állat feltöltése            | 1.0    | A menhelyek feltölthetik a gondozásukban lévő állatokat a nevük, fajtájuk, koruk, egészségi állapotuk, oltottságuk és fényképek megadásával.                                                         |
+| Adatkezelés A3 | Állat adatainak módosítása  | 1.0    | A menhelyek módosíthatják a már feltöltött állatok adatait, például a gazdira találás státuszát, egészségi állapot változását vagy új képek feltöltését.                                             |
+| Keresés K1     | Kereső funkció              | 1.0    | A vendégek és regisztrált felhasználók böngészhetnek az adatbázisban szűrők használatával (pl. fajta, menhely neve, település).                                                                 |                      
+| Felhasználó K5 | Felhasználói módosítások    | 1.0    | A menhelyek módosíthatják saját profiladataikat, például a leírást, logót, illetve elérhetőségi adatokat.                                                                                           |
+| Biztonság B1   | Adatbiztonság és mentés     | 1.0    | A rendszer titkosítva tárolja a felhasználói jelszavat.                                                                                     |
+
 ### 4. Jelenlegi üzleti folyamatok modellje
 A mai világban egyre nagyobb az igény arra, hogy az emberek gyorsan és egyszerűen találjanak megfelelő menhelyi állatokat örökbefogadásra. Jelenleg sok menhely nem rendelkezik olyan felülettel, ahol könnyen megoszthatnák az állataikat az örökbefogadók számára, így az elérhetőségük korlátozott. A papíralapú nyilvántartás és az elavult rendszerek sok időt vesznek igénybe, és bonyolulttá teszik az állatok adatainak kezelését. Az általunk tervezett weboldal erre kínál megoldást, modern technológiák segítségével könnyen kezelhető, interaktív felületet biztosítva. A rendszer lehetővé teszi az állatok adatainak egyszerű feltöltését, frissítését és nyomon követését, miközben egy központi platformként szolgál az örökbefogadók és menhelyek számára.
 
