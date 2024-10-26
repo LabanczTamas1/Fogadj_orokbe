@@ -237,6 +237,14 @@ Azért hogy a menhelyek és az örökbefogadók számára egyszerűbbé tegyük 
 
 ## 10. Funkció - követelmény megfeleltetés:
 
+- Menhely regisztráció: A weboldalnak képesnek kell lennie helyes ellenőrizni és kezelni a megadott adatokat és sikeresen regisztrálni egy új menhelyet. Amennyiben az adatok hiányosak vagy hibásak, a rendszernek figyelmeztetnie kell  a felhasználót.
+- Menhely profil létrehozása és szerkesztése: Képesnek kell lennie a weboldalnak létrehozni a megadott adatokkal egy profilt a menhelyeknek ugyanakkor szerkeszteni is lehetséges legyen a felhasználó számára.
+- Állat feltöltése: A menhelyek feltölthetik a gondozásukban lévő állatokat a nevük, fajtájuk, koruk, egészségi állapotuk, oltottságuk és fényképek megadásával.
+- Állat adatainak módosítása: A menhelyek módosíthatják a már feltöltött állatok adatait, például a gazdira találás státuszát, egészségi állapot változását vagy új képek feltöltését.
+- Kereső funkció: A vendégek és regisztrált felhasználók böngészhetnek az adatbázisban szűrők használatával (pl. fajta, menhely neve, település).                   
+- Felhasználói módosítások: menhelyek módosíthatják saját profiladataikat, például a leírást, logót, illetve elérhetőségi adatokat.
+- Adatbiztonság és mentés: A rendszer titkosítva tárolja a felhasználói jelszavat.                                                  
+
 ## 11. Fogalomszótár:
 
 ### Webfejlesztés és technológia
