@@ -1,15 +1,15 @@
 # Követelmény specifikáció
 
-### 1. Áttekintés
+## 1. Áttekintés
 A cél egy olyan weboldal létrehozása, amely lehetőséget biztosít menhelyek számára, hogy kisállataikat megoszthassák és bemutathassák az örökbefogadók számára. Az alkalmazásunk könnyen kezelhető felületet biztosít majd, amelyet modern webes technológiák segítségével valósítunk meg. A rendszer lehetőséget nyújt az állatok adatainak egyszerű feltöltésére, frissítésére és kezelésére, miközben egy központi platformként szolgál minden felhasználó számára.
 
-### 2. Jelenlegi helyzet
+## 2. Jelenlegi helyzet
 Jelenleg a menhelyek gyakran egyedi weboldalakat vagy közösségi média platformokat használnak arra, hogy kisállataikat bemutassák, ami időigényes és nem mindig hatékony. Sok menhely nem rendelkezik megfelelő eszközökkel és erőforrásokkal ahhoz, hogy professzionális megoldásokat használjon. Ez megnehezíti a kisállatok örökbe adását, mivel az információk nem egységesek, nehezen találhatók meg.
 
-### 3. Vágyálom rendszer
+## 3. Vágyálom rendszer
 A vágyálom rendszer egy olyan weboldal lenne, amely centralizált platformként működik, és lehetőséget biztosít minden menhely számára, hogy egy közös felületen keresztül osszák meg a kisállatokat. A rendszer egyszerűsítené az állatok adatainak feltöltését, karbantartását és megjelenítését, miközben javítaná a kisállatok láthatóságát. A cél az, hogy a menhelyek hatékonyabban találjanak új gazdákat a náluk lévő állatok számára, és csökkentsék a weboldalak kezelésével járó terheket.
 
-### 4. Funkcionális követelmények
+## 4. Funkcionális követelmények
 
 1. **Felhasználói funkciók**:
    - **Regisztráció és bejelentkezés**: A leendő örökbefogadók és menhelyek számára lehetőség nyílik felhasználói fiók létrehozására. Bejelentkezés után hozzáférhetnek az állatok adatlapjaihoz, és menhelyek esetében az állatok feltöltéséhez.
@@ -32,7 +32,7 @@ A vágyálom rendszer egy olyan weboldal lenne, amely centralizált platformkén
    - **Keresőmotor-optimalizálás (SEO)**: A rendszer úgy van kialakítva, hogy könnyen megtalálható legyen a keresőmotorokban, segítve ezzel az állatok gyorsabb örökbefogadását.
 
 
-### 5. Rendszerre vonatkozó törvények, szabványok, ajánlások:
+## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások:
 
 1. **Adatvédelmi jogszabályok (GDPR)**
    A rendszerben tárolt adatok jelentős része személyes adatnak minősül, különösen a leendő örökbefogadók és a menhelyi állatok adatai. Ezért biztosítani kell az adatvédelmi rendelet (General Data Protection Regulation, GDPR) előírásainak betartását. Ez magában foglalja:
@@ -52,36 +52,55 @@ A vágyálom rendszer egy olyan weboldal lenne, amely centralizált platformkén
 5. **ISO 27001 szabvány**
    Ha a projekt kiterjedt adatkezelési folyamataival és biztonsági kérdéseivel foglalkozik, érdemes az ISO 27001 szabvány alkalmazását megfontolni, amely egy nemzetközi szabvány az információbiztonsági irányítási rendszerekhez (ISMS).
 
-### 6. Jelenlegi üzleti folyamatok modellje
+## 6. Jelenlegi üzleti folyamatok modellje
 
 A mai világban a menhelyek gyakran hagyományos, elavult módszereket használnak a gondozott kisállatok bemutatására és örökbefogadásra való felkínálására. A legtöbb menhely nem rendelkezik integrált online rendszerrel, így a potenciális örökbefogadók nehezen találják meg az adott menhely által kínált kisállatokat, és a menhelyek is korlátozottan tudják frissíteni az elérhető állatok adatait. Jelenleg a legtöbb menhely csupán papír alapú nyilvántartásokat vezet, vagy különálló, nem központi adatbázisokat használnak, ami növeli az adminisztrációs terheket és az adatok frissítésének bonyolultságát. Ezen felül, sok menhelynek csupán közösségi média felületeken van lehetősége állataikat bemutatni, ami korlátozza az elérhető közönséget, és nem biztosít egy átlátható, jól strukturált felületet az örökbefogadók számára. 
 
 Az alkalmazásunk célja, hogy ezt a folyamatot teljesen új alapokra helyezze. Az általunk fejlesztett platform egy könnyen kezelhető, központi rendszert biztosít, amely lehetőséget nyújt a menhelyek számára, hogy digitálisan feltölthessék, frissíthessék és kezelhessék a kisállatok adatait, fotóit, valamint a lehetséges örökbefogadók egy modern, felhasználóbarát felületen keresztül böngészhessék az elérhető állatokat. Ez a rendszer nem csak csökkenti az adminisztrációs terheket, hanem megkönnyíti az örökbefogadók számára is a megfelelő kisállat kiválasztását és örökbefogadását, mindezt a mai technológiai lehetőségek kihasználásával.
 
-### 10. Fogalomtár
+## 7. Igényelt üzleti folyamatok
 
-#### PHP
+## 8. Követelménylista
+
+| Modul ID      | Név                        | Verzió | Kifejtés                                                                                                                                                                                                                                   |
+|---------------|-----------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Jogosultság M1 | Menhely regisztráció        | 1.0    | A menhelyek a nevük, e-mail címük és jelszavuk megadásával regisztrálhatnak. Amennyiben az adatok hiányosak vagy hibásak, a rendszer figyelmezteti a felhasználót.                                   |
+| Jogosultság M2 | Belépési felület            | 1.0    | A menhelyek, adminok és felhasználók beléphetnek az e-mail címük és jelszavuk megadásával. Hibás adatok esetén a felhasználó hibaüzenetet kap.                                                                     |
+| Jogosultság M3 | Jogosultsági szintek        | 1.0    | - **Admin:** új menhelyek jóváhagyása, felhasználók kezelése  <br> - **Menhely:** profil létrehozása, állatok feltöltése, adatok módosítása  <br> - **Vendég:** regisztráció és belépés, állatok keresése  |
+| Adatkezelés A1 | Menhely profil              | 1.0    | A menhelyek létrehozhatják profiljaikat, ahol bemutathatják magukat, feltölthetik logójukat, elérhetőségeiket és rövid leírást adhatnak magukról.                                                    |
+| Adatkezelés A2 | Állat feltöltése            | 1.0    | A menhelyek feltölthetik a gondozásukban lévő állatokat a nevük, fajtájuk, koruk, egészségi állapotuk, oltottságuk és fényképek megadásával.                                                         |
+| Adatkezelés A3 | Állat adatainak módosítása  | 1.0    | A menhelyek módosíthatják a már feltöltött állatok adatait, például a gazdira találás státuszát, egészségi állapot változását vagy új képek feltöltését.                                             |
+| Keresés K1     | Kereső funkció              | 1.0    | A vendégek és regisztrált felhasználók böngészhetnek az adatbázisban szűrők használatával (pl. fajta, menhely neve, település).                                                                 |                      
+| Felhasználó K5 | Felhasználói módosítások    | 1.0    | A menhelyek módosíthatják saját profiladataikat, például a leírást, logót, illetve elérhetőségi adatokat.                                                                                           |
+| Biztonság B1   | Adatbiztonság és mentés     | 1.0    | A rendszer titkosítva tárolja a felhasználói jelszavat.                                                                                     |
+
+
+## 9. Riportok
+
+## 10. Fogalomtár
+
+### PHP
 Egy szerveroldali szkriptnyelv, amelyet webes alkalmazások fejlesztéséhez használnak. A PHP feldolgozza a felhasználói kéréseket, dinamikus tartalmat hoz létre, és adatbázis-műveleteket hajt végre.
 
-#### JavaScript
+### JavaScript
 Kliensoldali programozási nyelv, amely interaktivitást és dinamikus viselkedést biztosít a weboldalon. Lehetővé teszi az elemek valós idejű frissítését, mint például űrlapok kezelése, animációk vagy felhasználói élmény javítása.
 
-#### Session
+### Session
 A session (munkamenet) egy olyan állapotmegőrzési mechanizmus, amely lehetővé teszi, hogy a szerver adatokat tároljon egy adott felhasználóról a böngészési folyamat során. Az állat örökbefogadásra szolgáló oldal például session-t használhat, hogy megjegyezze a felhasználó által kiválasztott állatokat.
 
-#### CSS (Cascading Style Sheets)
+### CSS (Cascading Style Sheets)
 A CSS segítségével a weboldal megjelenését és stílusát határozzuk meg, például a színeket, betűtípusokat, elrendezést. A reszponzív felületek kialakításához is szükséges, hogy az oldal esztétikailag megfelelően jelenjen meg különböző eszközökön (mobil, tablet, PC).
 
-#### Reszponzív felület
+### Reszponzív felület
 Olyan weboldal, amely alkalmazkodik a különböző képernyőméretekhez (mobil, tablet, PC), biztosítva, hogy a felület minden eszközön könnyen használható és jól megjelenő legyen.
 
-#### Adatbázis
+### Adatbázis
 Az adatbázis a webalkalmazásban az állatok adatait, a felhasználói profilokat és az örökbefogadási kérelmeket tárolja. PHP segítségével kapcsolódik az adatbázishoz a dinamikus tartalom kiszolgálására.
 
-#### Űrlap
+### Űrlap
 Az űrlapok azok az elemek az oldalon, amelyeken keresztül a felhasználók adatokat küldhetnek be, például örökbefogadási kérelmet, regisztrációt vagy kapcsolatfelvételt. JavaScript és PHP segítségével az űrlapok validálása és feldolgozása történik.
 
-#### API
+### API
 Egy alkalmazás programozási felülete, amely lehetővé teszi a különböző szoftverek közötti kommunikációt. Weboldalunk egy külső API-t is használhat, például állatmenhelyek adatainak lekéréséhez.
 
 
