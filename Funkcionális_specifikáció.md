@@ -27,13 +27,13 @@ Ezen felül a rendszer lehetőséget biztosít a menhelyeknek a saját logójuk/
 | Felhasználó K5 | Felhasználói módosítások    | 1.0    | A menhelyek módosíthatják saját profiladataikat, például a leírást, logót, illetve elérhetőségi adatokat.                                                                                           |
 | Biztonság B1   | Adatbiztonság és mentés     | 1.0    | A rendszer titkosítva tárolja a felhasználói jelszavat.                                                                                     |
 
-### 4. Jelenlegi üzleti folyamatok modellje
+## 4. Jelenlegi üzleti folyamatok modellje
 A mai világban egyre nagyobb az igény arra, hogy az emberek gyorsan és egyszerűen találjanak megfelelő menhelyi állatokat örökbefogadásra. Jelenleg sok menhely nem rendelkezik olyan felülettel, ahol könnyen megoszthatnák az állataikat az örökbefogadók számára, így az elérhetőségük korlátozott. A papíralapú nyilvántartás és az elavult rendszerek sok időt vesznek igénybe, és bonyolulttá teszik az állatok adatainak kezelését. Az általunk tervezett weboldal erre kínál megoldást, modern technológiák segítségével könnyen kezelhető, interaktív felületet biztosítva. A rendszer lehetővé teszi az állatok adatainak egyszerű feltöltését, frissítését és nyomon követését, miközben egy központi platformként szolgál az örökbefogadók és menhelyek számára.
 
-### 5. Igényelt üzleti folyamatok modellje
+## 5. Igényelt üzleti folyamatok modellje
 Azért hogy a menhelyek és az örökbefogadók számára egyszerűbbé tegyük a kisállatok örökbefogadásának folyamatát, létrehozunk egy weboldalt, amely lehetőséget biztosít a menhelyek számára, hogy bemutathassák kisállataikat. Az alkalmazásunk egy könnyen kezelhető felületet kínál, amelyet modern webes technológiák segítségével valósítunk meg. A menhelyek egyszerűen feltölthetik, frissíthetik és kezelhetik az állatok adatait, így nem kell minden egyes kisállatot külön-külön bemutatniuk. Ezáltal az örökbefogadók számára sokkal könnyebbé válik a választás, hiszen egy helyen találhatják meg az összes elérhető kisállatot. A rendszer nemcsak a menhelyek, hanem a potenciális örökbefogadók számára is hasznos, mivel gyorsan és könnyen hozzáférhetnek az információkhoz, és azonnal értesülnek a kisállatok állapotáról és elérhetőségéről. Ezzel a platformmal szeretnénk elősegíteni az állatok örökbefogadását, és egy szorosabb kapcsolatot kialakítani a menhelyek és az örökbefogadók között.
 
-### 6. Használati esetek
+## 6. Használati esetek
 *Felhasználói Szerepkörök a Fogadj örökbe Weboldalon*
 
 **REGISZTRÁLT FELHASZNÁLÓ:**
@@ -70,7 +70,7 @@ Azért hogy a menhelyek és az örökbefogadók számára egyszerűbbé tegyük 
 
 - Az adminisztrátor egy problémás tartalmat észlel az állatok profilja között, amely nem felel meg az irányelveknek, és eltávolítja azt a platformról.
 
-### 7. Használati esetek:
+## 7. Használati esetek:
 **Felhasználói szerepkörök:**
 
 1. **REGISZTRÁLT FELHASZNÁLÓ:**
@@ -104,7 +104,7 @@ Azért hogy a menhelyek és az örökbefogadók számára egyszerűbbé tegyük 
    - Új úticélokat ad hozzá, amelyekről a felhasználók véleményt alkothatnak.
 
 ---
-### 8. Megfeleltetés (Használati esetek és követelmények):
+## 8. Megfeleltetés (Használati esetek és követelmények):
 
 | Követelmény                                  | Használati eset                                                                                       | Szerepkörök                              |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------|------------------------------------------|
@@ -142,7 +142,7 @@ Azért hogy a menhelyek és az örökbefogadók számára egyszerűbbé tegyük 
 ##### Állatmenhely módosítása oldal
 ![Állatmenhely módosítása oldal](files/img/Feltöltés-2.png)
 
-### 9. Forgatókönyv:
+## 9. Forgatókönyv:
 
 ### 1. Érkezési Oldal
 - **Célja**: A látogatók üdvözlése és a weboldal bemutatása.
@@ -234,3 +234,50 @@ Azért hogy a menhelyek és az örökbefogadók számára egyszerűbbé tegyük 
    - **Megközelíthetőség**: A felhasználó/admin csak a profiljából a poszt alatti "Módosítás" gombra kattintva érheti el.
 
 ---
+
+## 10. Funkció - követelmény megfeleltetés:
+
+## 11. Fogalomszótár:
+
+### Webfejlesztés és technológia
+
+- HTML (Hypertext Markup Language): A weboldalak szerkezetét definiáló nyelv
+- CSS (Cascading Style Sheets): A weboldalak kinézetét és formázását szabályozó nyelv
+- JavaScript: Interaktív elemeket és dinamikus működést biztosító programozási nyelv
+- Web Server: A weboldalakat szolgáltató szoftverrendszer
+- URL (Uniform Resource Locator): Az adott weboldal címe és helye az interneten
+- PHP: Szerveroldali scriptnyelv weboldalak létrehozásához
+- SQL: Adatbázisokkal való kommunikációhoz használt nyelv
+
+### Webes marketing és SEO
+
+- Backlink: Egy másik oldalra mutató linkek egy adott weboldalhoz
+- Content Marketing: Tartalmat készítve az ügyfelek érdeklődésének ösztönzése érdekében
+- Conversion Rate: Az oldal látogatóinak hányada, akik végrehajtottak egy konkrét cselekedetet
+- CPC (Cost Per Click): Az egyes reklámkattintásokért fizetett összeg
+- CTR (Click Through Rate): A reklám vagy link kattintási aránya
+- Keyword Research: Kulcsszavak meghatározása és elemzése a célcsoport szempontjából
+- Link Building: Hivatkozások létrehozása más weboldalakra
+- Meta Description: A Google keresési eredményeiben megjelenő leírás rövidítése
+- On-page SEO: A weboldalon található SEO-optimalizálási technikák
+- Organic Traffic: Természetes keresési eredmények által generált forgalom
+- PPC (Pay Per Click): Fizetős reklámmodell, ahol a felhasználó fizet minden kattintásért
+- SERP (Search Engine Results Page): A keresőmotorok keresési eredményei oldala
+- White Hat SEO: Törvényes és etikus módszerekkel végzett SEO
+
+### Webdesign és felülettervezés
+
+- Responsive Design: Adaptív tervezés, ami optimálisan működik különböző eszközökön
+- UI (User Interface): Felhasználói felület, amely lehetővé teszi a felhasználók és a rendszer közötti interakciót
+- UX (User Experience): A felhasználók élményét befolyásoló összes tényező
+- Wireframe: Egyszerű vázlatos rajz a weboldal felépítéséről
+
+### Webhely fenntartás és biztonság
+
+- Backup: Adatmentés a biztonság érdekében
+- CDN (Content Delivery Network): Globális hálózat, mely tartalmakat szolgáltat felhasználóknak közelebbi helyről
+- DDoS Protection: Állóideiglenes támadások elleni védelem
+- Firewall: Jogi korlátozások betartásának ellenőrzése
+- HTTPS: Biztonságos protokoll a weboldalakhoz
+- SSL/TLS: Titkosítási protokoll a weboldalakhoz
+- Uptime Monitoring: Az oldal elérhetőségének folyamatos figyelése
