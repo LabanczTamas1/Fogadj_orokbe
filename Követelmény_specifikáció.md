@@ -60,6 +60,14 @@ Az alkalmazásunk célja, hogy ezt a folyamatot teljesen új alapokra helyezze. 
 
 ## 7. Igényelt üzleti folyamatok
 
+A megrendelő a fő oldalon akar bejelentkezni (felhasználónév, jelszó), valamint a regisztrációt megkezdeni, mely egy új oldalon folytatódna (felh., jelszó, e-mail).
+Bejelentkezést követően lehetőséget, hozzáférést kell adni szerepkörtől függően az alkalmazás funkcióihoz.
+A menhelyek profiljait létrehozni és szerketszteni a gondozók tudják.
+Menhelyeket és örökbefogadásra váró kisállatokat is csak gondozók tudják hozzáadni már meglévő menhelyekhez.
+Ezután a felhasználók ezeket a menhely profilokat és kisállatokat tudják böngészni, lehetőségük van örökbefogadni egy vagy több kisállatot.
+
+![Igényelt üzleti folyamatok modellje](files/img/igenyelt_uzleti_folyamatok_modellje.png)
+
 ## 8. Követelménylista
 
 | Modul ID      | Név                        | Verzió | Kifejtés                                                                                                                                                                                                                                   |
