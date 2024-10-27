@@ -85,6 +85,67 @@ Ezután a felhasználók ezeket a menhely profilokat és kisállatokat tudják b
 
 ## 9. Riportok
 
+### Fő Funkciók
+
+   **Bejelentkezés és Regisztráció:**  
+   - Felhasználóknak lehetőséget kell adni regisztrálni és bejelentkezni az oldalra.  
+   - Szükség van jelszóvédelemre és elfelejtett jelszó funkciónak.
+
+   **Fióktanúsítványok:**  
+   - Felhasználóknak lehetőséget kell adni letölteni és kezelni saját tanúsítványaikat.  
+   - Támogassa többféle tanúsítványformátumot (pl. PDF, PNG).
+
+   **Tanúsítvány Keresés:**  
+   - Bejelentkezett felhasználóknak lehetőséget kell adni keresni tanúsítványukat.  
+   - További szűrőkkel (pl. dátum, típus) lehessen szűrni a keresési eredményeket.
+
+   **Tanúsítvány Elküldése:**  
+   - Felhasználóknak lehetőséget kell adni elküldeni tanúsítványukat másoknak.  
+   - Támogassa többféle küldési módot (pl. email, chat).
+
+### Felhasználói Élmény
+
+   **Intuitív Felület:**  
+   - Egyszerű és logikus navigációt kell biztosítani az oldal különböző részeinek eléréséhez.  
+   - Helyes színmódszertan és tipográfia segítse a felhasználók könnyebb eligazodását.
+
+   **Gyors Működés:**  
+   - Az oldal működése legyen gyors és reagáló, különösen a tanúsítvány keresés és elküldése során.  
+   - Optimalizálja az oldalt a webes böngészőkben való betöltésre.
+
+   **Biztonságos Adatkezelés:**  
+   - Minden adatot védjen a GDPR és más releváns jogszabályok szerint.  
+   - Implementáljon HTTPS-t minden oldalra és tartalomhoz.
+
+### Technikai Specifikációk
+
+   **Webfejlesztői Keretrendszer:**  
+   - Használja a modern JavaScript keretrendszereket (pl. React, Vue.js).  
+   - Támogassa a progresszív web app (PWA) fejlesztést.
+
+   **Adattárolás:**  
+   - Használja a helyi tárolást (localStorage, sessionStorage) a felhasználói preferenciák rövid ideig tartó tárolásához.  
+   - Implementáljon egy adatbázist a felhasználói információk és tanúsítványok hosszabb tárolásához.
+
+   **API Integráció:**  
+   - Fejlesszen ki RESTful API-t a tanúsítványkezeléshez és a külső rendszerekkel való integrációhoz.  
+   - Támogassa az autentikációt és autorizációt az API-hoz.
+
+### Követelmények
+
+   **Elérhetőség:**  
+   - Az oldal legyen elérhető a világ bármely pontjáról.
+   - Támogassa a mobil eszközökön történő elérést.
+
+   **Multilingvizualitás:**  
+   - Támogassa legalább két nyelvet (például angol és magyar).
+   - Automatikusan válassza ki a felhasználó által beállított nyelvet.
+
+   **Kapcsolati Funkciók:**  
+   - Implementáljon közösségi média megosztási gombokat.
+   - Támogassa a felhasználók közötti kommunikációt (chat vagy üzenetsor).
+
+
 ## 10. Fogalomtár
 
 ### PHP
