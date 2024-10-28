@@ -59,6 +59,32 @@ Az ütemterv folyamatosan frissül a fejlesztés előrehaladtával, és a Scrum 
 
 <img src="files/img/uzleti_folyamatok_modellje.png" width="800" height="800">
 
+## 4. Követelmények
+
+A programnak egy webes platformot kell biztosítania, amely egyszerre szolgálja ki az örökbefogadásra jelentkező
+felhasználókat és az állatmenhelyeket. A rendszer célja, hogy egy közös, könnyen kezelhető felületen keresztül tegye
+lehetővé az állatmenhelyek és az örökbefogadók számára a szükséges funkciókat, anélkül, hogy külön weboldalak
+fenntartásával kellene bajlódniuk. Az oldal a következő alapvető követelményeket tartalmazza:
+
+1. Felhasználói Regisztráció és Hitelesítés
+   - A felhasználóknak lehetőséget kell biztosítani, hogy regisztráljanak a platformra kétféle szerepkörben:
+     - **Örökbefogadó felhasználóként**, aki állatokat keres örökbefogadás céljából.
+     - **Menhelyként**, akik az örökbe fogadható állatokat tölthetik fel, és saját profiljukat menedzselhetik.
+   - Az egyes szerepköröknek különböző jogosultságokkal kell rendelkezniük.
+2. Profilkezelés.
+   - **Menhelyek számára és örökbefogadók számára**: a profilukon lévő információkat tudják kezelni.
+ 3. Állatprofilok Feltöltése és Keresés
+   - A menhelyeknek lehetőséget kell biztosítani az állatok adatainak feltöltésére és fényképekkel való
+   megjelenítésére, hogy a potenciális örökbefogadók megismerhessék az állatokat.
+   - Az örökbefogadók számára keresési és szűrési lehetőségeket kell biztosítani az állatok között, a különböző
+   jellemzők alapján, hogy gyorsan megtalálhassák a számukra megfelelő állatokat.
+ 4. Kommunikációs Eszközök
+   - A rendszernek támogatnia kell egy üzenetküldési funkciót, amely lehetővé teszi az örökbefogadók és menhelyek
+   közötti kapcsolatfelvételt.
+ 5. Adminisztrációs Felület
+   - A rendszernek biztosítania kell egy adminisztrációs felületet a platform kezelői számára, ahol ellenőrizhetik és
+   moderálhatják a feltöltött tartalmakat.
+
 ## 5. Funkcionális terv
 
 ### Rendszerszereplők:
@@ -165,6 +191,9 @@ Ez az absztrakt domain modell segít a rendszer tervezésében, megkönnyítve a
 - A felhasználói jelszavak bcrypt alapú titkosítással vannak tárolva az adatbázisban.
 
 Ez az architekturális terv biztosítja a rendszer hatékony, biztonságos és felhasználóbarát működését, lehetővé téve az örökbefogadási információk egyszerű és gyors kezelését.
+## 9. Adatbázis terv:
+![Adatbázis terv](files/img/adat_b.png)
+
 ## 10. Implementációs terv:
 A Webes felület főként **HTML**, **CSS**, **PHP**, **Javascript** nyelven fog készülni.
 Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és
