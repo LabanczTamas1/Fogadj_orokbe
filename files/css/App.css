@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #264A46;
+}
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('your-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #BF836D;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Section below the hero */
+.info-section {
+    padding: 40px 20px;
+    background-color: #264A46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-section .content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.info-section .content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.curved-shape {
+    background-color: #fff;
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+}
