@@ -3,16 +3,16 @@ namespace App\Models;
 
 use App\Model;
 
-class Pet extends Model
+class Form extends Model
 {
-    public string $table = "user";
+    public string $table = "form";
 
     public array $attributes = [
         'id' => 'int',
-        'username' => 'string',
+        'fullname' => 'string',
         'email' => 'string',
-        'password' => 'string',
-        'type' => 'string',
+        'message' => 'string',
+        'pet_id' => 'int',
         'shelter_id' => 'int'
     ];
 }
