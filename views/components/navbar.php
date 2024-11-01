@@ -1,7 +1,7 @@
-<div class="navbar">
-        <div class="logo">Fogadj örökbe!</div>
-        <div>
-            <a href="#">Regisztráció</a>
-            <a href="#">Bejelentkezés</a>
-        </div>
-</div>
+<nav class="navbar">
+    <div class="logo" style="">Fogadj örökbe!</div>
+    <div class="nav-links">
+        <a href="#register">Regisztráció</a>
+        <a href="#login">Bejelentkezés</a>
+    </div>
+</nav>

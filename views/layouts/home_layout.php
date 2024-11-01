@@ -29,7 +29,7 @@
 
         <section class="info-section">
             <div class="content">
-                <img src="<?php echo $this->asset('path/to/image.jpg') ?>" alt="Dog in arms">
+                <img src="/files/img/pexels-wildlittlethingsphoto-2055231 1.png" style="width: 480px; height:480px;">
                 <p>
                     Találj rá a tökéletes társra és ments meg egy életet! Weboldalunkon várnak rád cicák, kutyák és más
                     kisállatok, akik egy biztonságos, szerető otthont keresnek.
