@@ -8,6 +8,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="<?= $this->asset('css/App.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Navbar.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/Information.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/Footer.css'); ?>">
 <script src="<?= $this->asset('bootstrap.bundle.min.js'); ?>"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -13,31 +13,24 @@
     <?php $this->include('components/navbar') ?>
 
     <main class="container" style="margin-top: 100px;">
-        <section class="hero">
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <h1>Adj otthont egy szerető állatnak!</h1>
-                    <p>
-                        Találj rá a tökéletes társra és ments meg egy életet! Weboldalunkon várnak rád cicák, kutyák és más
-                        kisállatok, akik egy biztonságos, szerető otthont keresnek. Az örökbefogadás egyszerű, gyors és
-                        segítesz nekik egy boldogabb életet kezdeni. Nézz körül, válaszd ki új legjobb barátodat, és
-                        kezdjétek el együtt az új közös kalandot!
-                    </p>
-                    <a href="#" class="btn">Tudj meg többet!</a>
-                </div>
-        </section>
-
-        <section class="info-section">
-            <div class="content">
-                <img src="/files/img/pexels-wildlittlethingsphoto-2055231 1.png" style="width: 480px; height:480px;">
-                <p>
-                    Találj rá a tökéletes társra és ments meg egy életet! Weboldalunkon várnak rád cicák, kutyák és más
-                    kisállatok, akik egy biztonságos, szerető otthont keresnek.
-                </p>
-            </div>
-        </section>
+        
+    <?php $this->include('components/information') ?>
+    
     </main>
+    <div class="container-stb">
 
+    
+    <div class="svg-container">
+    <img src="files/svg/Group.svg" alt="Person holding a dog" class="svg-right">
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p>© Mr. Weboldal Inc. 2024</p>
+      <div>
+        <a href="#">About</a> | <a href="#">Terms and Policy</a>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>

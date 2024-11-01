@@ -1,0 +1,24 @@
+.hero-content {
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px; /* Ensure no padding */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+    height: 562px;
+}
+
+.hero-content > p {
+    font-size: 32px;
+}
+
+.hero-content > h1 {
+    font-size: 48px;
+}
+
+.hero {
+    color: white;
+}
+
+.btn {
+    color: black;
+    font-size: 26px;
+}

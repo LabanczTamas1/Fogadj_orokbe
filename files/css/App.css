@@ -4,7 +4,15 @@ body {
     color: #fff;
     background-color: #264A46;
     background-image: url('/files/img/pexels-wildlittlethingsphoto-2055231 1.png');
+    background-size: cover;        
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    height: 1000px;
 }
+
+main{
+    height: 800px;
+}
+
 
 /* Navigation bar styling */
 .navbar {
@@ -33,7 +41,7 @@ body {
 
 .hero {
     position: relative;
-    height: 90vh;
+    height: 50vh;
     background: url('your-image.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -53,7 +61,6 @@ body {
 .hero-content {
     position: relative;
     z-index: 5;
-    max-width: 600px;
 }
 
 .hero-content h1 {
@@ -101,3 +108,51 @@ body {
     height: 100px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
 }
+
+
+  
+  .container-stb {
+    background-color: #fff;
+  }
+
+  .svg-container {
+    background-color: #fff;
+    display: flex;
+  }
+  
+ 
+  
+  .content-block {
+    position: relative;
+    background-color: #2e5a5c;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    width: 45%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .content-block img {
+    width: 1038.29px;
+    height: 983.13px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: rotate(-50deg);
+  }
+
+  .svg-right {
+    margin-left: auto; /* Pushes the image to the right */
+  }
+  
+  .content-block.large {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: aqua;
+  }
+  
+  
