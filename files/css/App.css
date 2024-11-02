@@ -155,4 +155,25 @@ main{
     background-color: aqua;
   }
   
+  .svg-container {
+    position: relative;
+  }
   
+  .svg-container img {
+    display: block; /* Removes any gap under the image */
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 85%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to be exactly in the center */
+    color: white; /* Text color */
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Makes text more visible over the image */
+  }
+  
+  .sub-title{
+    font-size: larger;
+  }
