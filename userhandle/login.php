@@ -14,18 +14,17 @@ if (isset($_POST["userlogin"])) {
 ?>
 
 <div id="for-middle-container">
-<form method="POST" id="login_form">
+    <p class="sign-type">Bejelentkezés</p>
+    <form method="POST" id="login_form">
         <div>
-            <label for="email_value">Email cím: </label>
-            <input type="email" name="email" id="email_value" required>
+            <input type="email" name="email" id="email_value" placeholder="Email" required>
         </div>
         <div>
-            <label for="passwd_value">Jelszó:</label>
-            <input type="password" name="passwd" id="passwd_value" required>
+            <input type="password" name="passwd" id="passwd_value" placeholder="Jelszó" required>
         </div>
-        <button type="submit" name="userlogin">Bejelentkezés</button>
-        <div>
-            <div><a href="register.php">Regisztráció</a></div>
+        <button type="submit" class="sign-button" name="userlogin">Bejelentkezés</button>
+        <div class="linky">
+            <a href="register.php">Regisztráció</a>
         </div>
     </form>
 </div>

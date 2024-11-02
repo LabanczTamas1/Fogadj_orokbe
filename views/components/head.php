@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="<?= $this->asset('css/Navbar.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Information.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Footer.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/Sign.css'); ?>">
 <script src="<?= $this->asset('bootstrap.bundle.min.js'); ?>"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
