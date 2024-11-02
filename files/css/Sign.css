@@ -49,3 +49,36 @@ input::placeholder {
 .linky > a {
     color: white;
 }
+
+.pet-card{
+    display: flex;
+    background-color: #305C60;
+    color: white;
+    width: 90%;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.pet-card img{
+    width: 812px !important;
+    height: 544px;
+}
+
+.pet-information{
+    padding: 50px;
+    font-size: 24px;
+}
+
+.pet-information *{
+    margin-top: 25px;
+}
+
+.pet-name{
+    font-size: 40px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+
