@@ -13,8 +13,8 @@
     <?php $this->include('components/navbar') ?>
 
     <main class="container" style="margin-top: 100px;">
-        
-    <?php $this->include('components/information') ?>
+    <?php echo $content; ?>
+   
     
     </main>
    
