@@ -1,0 +1,38 @@
+.shelter-card{
+    width: 477px;
+    height: 465px;
+    background-color: #305C60;
+    overflow: hidden;
+}
+
+.shelter-card img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.shelter-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.shelter-name{
+    font-size: 32px;
+    color: white;
+}
+
+.shelter-location{
+    font-size: 20px;
+    color: white;
+    vertical-align: middle;
+}
+
+.shelter-button{
+    width: 274px;
+    height: 46px;
+    background-color: #B0846D;
+    color: white;
+    margin-top: 40px;
+}

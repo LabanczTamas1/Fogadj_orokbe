@@ -21,7 +21,7 @@
 }
 
 /* Links styling */
-.nav-links a {
+.nav-links a, .logo a{
     color: white;
     text-decoration: none;
     margin-left: 20px;
@@ -29,6 +29,12 @@
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.logo a{
+ font-size: 1.5rem;
+ margin-left: 0px;
+}
+
+.nav-links a:hover, .logo a:hover{
     color: #cccccc; /* Lighter color on hover */
+    text-decoration: none;
 }

@@ -10,27 +10,23 @@ if (isset($_POST["regist"])) {
 
 <div id="for-middle-container">
 <form method="post" enctype="multipart/form-data">
-    <h3>Regisztráció</h3>
+<p class="sign-type">Regisztáció</p>
     <div>
-        <label for="email_value">Email cím: </label>
-        <input type="email" name="email" id="email_value" required>
+        <input type="email" name="email" id="email_value" placeholder="Email" required>
     </div>
     <div>
-        <label for="username_value">Felhasználónév: </label>
-        <input type="text" name="username" id="username_value" required>
+        <input type="text" name="username" id="username_value" placeholder="Felhasználónév" required>
     </div>
     <div>
-        <label for="passwd1_value">Jelszó: </label>
-        <input type="password" name="passwd1" id="passwd1_value" required>
+        <input type="password" name="passwd1" id="passwd1_value" placeholder="Jelszó" required>
     </div>
     <div>
-        <label for="passwd2_value">Jelszó megerősítése: </label>
-        <input type="password" name="passwd2" id="passwd2_value" required>
+        <input type="password" name="passwd2" id="passwd2_value" placeholder="Jelszó megerősítése" required>
     </div>
     <div>
-        <button type="submit" name="regist">Regisztráció</button>
+        <button type="submit" class="sign-button" name="regist">Regisztráció</button>
     </div>
-    <div>
+    <div class="linky">
         <a href="login.php">Bejelentkezés</a>
     </div>
 </form>
