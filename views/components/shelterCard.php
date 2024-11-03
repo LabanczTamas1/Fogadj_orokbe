@@ -1,7 +1,3 @@
-<?php
-function post_item(array $post)
-{
-?>
 <div class="shelter-card">
     <img src="/../../files/img/SPEEDY2-768x1253.jpg" alt="Person holding a dog">
     <div class="shelter-information">
@@ -16,6 +12,3 @@ function post_item(array $post)
     <button href="/../pages/pets" class="shelter-button">x darab kisállat</button>
   </div>
 </div>
-<?php
-}
-?>

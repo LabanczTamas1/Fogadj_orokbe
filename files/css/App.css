@@ -177,3 +177,52 @@ main{
   .sub-title{
     font-size: larger;
   }
+
+  .container-choose{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-choose a:first-child{
+    margin-right:350px;
+  }
+
+  .container-choose a:last-child{
+  }
+
+
+  .container-choose::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 52px;
+    bottom: 0;
+    width: 6px; /* Adjust the width as needed */
+    background-color: #041E1C; /* Set the line color */
+    transform: translateX(-50%);
+}
+  .container-choose a{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-choose a:hover{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.30);
+  }
+
+  .title{
+    color: white;
+    font-size: 38px;
+    text-decoration: none;
+  }
+  
+
+  .card-u{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+

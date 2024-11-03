@@ -1,0 +1,33 @@
+<?php
+require_once __DIR__ . '/../lib/autoload.php';
+use App\Helper;
+
+new App\Template('chooseOption','empty');
+
+if (Helper::isAuth()) header('Location: /');
+
+if (isset($_POST["userlogin"])) {
+    $LoginController = new App\Controllers\LoginController;
+
+    $LoginController->Get_user($_POST['email'], $_POST['passwd']);
+}
+?>
+
+
+<div class="container-choose">
+        <!-- Left Card for Menhelyek -->
+        <a href="shelters.php">
+            <div class="card-u">
+                <div class="title">Menhelyek</div>
+                <img src="/files/img/image1.png" alt="Shelter Image">
+            </div>
+        </a>
+
+        <!-- Right Card for Örökbefogadásra váró állatok -->
+        <a href="adoption.html">
+            <div class="card-u">
+                <div class="title">Örökbefogadásra váró állatok!</div>
+                <img src="/files/img/image2.png" alt="Animals waiting for adoption">
+            </div>
+        </a>
+    </div>
