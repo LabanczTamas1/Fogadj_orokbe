@@ -19,9 +19,8 @@ CREATE TABLE users (
     email VARCHAR(255),
     password VARCHAR(255),
     type ENUM('Developer', 'User', 'Shelter'),
-    shelter_id INT(11),
-    PRIMARY KEY (id),
-    FOREIGN KEY (shelter_id) REFERENCES shelter(id) ON DELETE SET NULL
+    shelter_name VARCHAR(255),
+    PRIMARY KEY (id)
 );
 
 -- Table: pet_posts
