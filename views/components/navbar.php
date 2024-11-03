@@ -6,7 +6,7 @@
         <a href="/../userhandle/register">Regisztráció</a>
         <a href="/../userhandle/login">Bejelentkezés</a>
         <?php else :?>
-           <a href=""><?= App\Helper::user()->username ?></a> 
+           <a href="/../pages/profile"><?= App\Helper::user()->username ?></a> 
             <a href="/../userhandle/logout">Kijelentkezés</a>
         <?php endif; ?>
     </div>

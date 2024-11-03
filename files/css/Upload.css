@@ -1,0 +1,33 @@
+.upload-form{
+    width: 658px;
+    height: 641px;
+    background-color: #305C60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#upload-name{
+    color: white;
+    font-size: 32px;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload-button {
+    color: white;
+    font-size: 24px;
+    background-color: #B0846D;
+    margin-bottom: 0px !important;
+    text-align: center;
+    width: 274px;
+    padding: 0px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}

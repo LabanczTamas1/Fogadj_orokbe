@@ -9,6 +9,14 @@
     <?php $this->include('components/head') ?>
 </head>
 
+<style>
+
+footer{
+  margin-top: 585px;
+}
+
+</style>
+
 <body class="helping_quary">
     <?php $this->include('components/navbar') ?>
 
@@ -22,10 +30,12 @@
     
     <div class="svg-container">
   <img src="files/svg/Group.svg" alt="Person holding a dog" class="svg-right">
-  <div class="overlay-text"><div class="sub-title">  <img src="files/img/SPEEDY2-768x1253.jpg" alt="Person holding a dog" width="0px" height="600px">„Segítsd a menhely lakóit – adományozz egy boldogabb jövőért!</div>
+  <div class="overlay-text"><div class="sub-title">  <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Person holding a dog" width="400px" height="600px">„Segítsd a menhely lakóit – adományozz egy boldogabb jövőért!</div>
   Egy kis támogatás is sokat jelent. Legyen szó ételről, gyógyszerről vagy játékokról, az adományod közvetlenül az állatok jólétét szolgálja.”</div>
 
 </div>
+
+<img src="/files/svg/Vector.svg" alt="Svg 2" style="position: absolute; top: 150%;">
 
     <?php $this->include('components/footer') ?>
   </div>
