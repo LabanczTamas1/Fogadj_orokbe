@@ -3,9 +3,9 @@ namespace App\Models;
 
 use App\Model;
 
-class Pet extends Model
+class User extends Model
 {
-    public string $table = "user";
+    public string $table = "users";
 
     public array $attributes = [
         'id' => 'int',
@@ -13,6 +13,6 @@ class Pet extends Model
         'email' => 'string',
         'password' => 'string',
         'type' => 'string',
-        'shelter_id' => 'int'
+        'shelter_name' => 'string'
     ];
 }

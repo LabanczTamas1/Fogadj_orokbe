@@ -4,13 +4,7 @@ use App\Helper;
 
 new App\Template('chooseOption','empty');
 
-if (Helper::isAuth()) header('Location: /');
 
-if (isset($_POST["userlogin"])) {
-    $LoginController = new App\Controllers\LoginController;
-
-    $LoginController->Get_user($_POST['email'], $_POST['passwd']);
-}
 ?>
 
 
@@ -24,10 +18,10 @@ if (isset($_POST["userlogin"])) {
         </a>
 
         <!-- Right Card for Örökbefogadásra váró állatok -->
-        <a href="adoption.html">
-            <div class="card-u">
+        <a href="pets.php">
+        <div class="card-u">
                 <div class="title">Örökbefogadásra váró állatok!</div>
                 <img src="/files/img/image2.png" alt="Animals waiting for adoption">
-            </div>
-        </a>
-    </div>
+        </div>
+    </a>
+</div>

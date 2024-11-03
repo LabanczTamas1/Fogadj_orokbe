@@ -1,9 +1,10 @@
 <?php
 require_once __DIR__ . '/../lib/autoload.php';
 new App\Template('register','sign_layout');
+use App\Controllers\RegisterController;
 
 if (isset($_POST["regist"])) {
-    $user = new RegisterController();
+    $user = new RegisterController;
     $user -> InsertUser($_POST);
 }
 ?>
@@ -23,9 +24,14 @@ if (isset($_POST["regist"])) {
     <div>
         <input type="password" name="passwd2" id="passwd2_value" placeholder="Jelszó megerősítése" required>
     </div>
+        <select id="type"  name="type">
+            <option value="User"  selected>Felhasználó</option>
+            <option value="Shelter" >Menhely</option>
+        </select>
     <div>
         <button type="submit" class="sign-button" name="regist">Regisztráció</button>
     </div>
+    
     <div class="linky">
         <a href="login.php">Bejelentkezés</a>
     </div>

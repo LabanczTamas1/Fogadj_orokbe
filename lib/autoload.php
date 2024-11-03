@@ -23,3 +23,5 @@ class Autoloader
 }
 
 $autoloader = new Autoloader();
+$session = new App\Controllers\SessionController;
+$user = App\Helper::user();

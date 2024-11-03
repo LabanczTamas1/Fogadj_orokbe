@@ -26,7 +26,7 @@ class SessionController
     public function create($user_id)
     {
         $_SESSION["user"] = new Session($user_id, );
-
+        
         return true;
     }
 

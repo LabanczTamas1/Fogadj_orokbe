@@ -2,14 +2,14 @@
 require_once __DIR__ . '/../lib/autoload.php';
 use App\Helper;
 
+
 new App\Template('login','sign_layout');
 
 if (Helper::isAuth()) header('Location: /');
 
 if (isset($_POST["userlogin"])) {
-    $LoginController = new App\Controllers\LoginController;
-
-    $LoginController->Get_user($_POST['email'], $_POST['passwd']);
+    $loginCon = new App\Controllers\LoginController;
+    $loginCon->Get_user($_POST);
 }
 ?>
 
