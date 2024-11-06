@@ -16,7 +16,7 @@ class Pet extends Model
         'pet_name'=> 'string',
         'pet_gender'=> 'string',
         'pet_breed'=> 'string',
-        'pet_status'=> 'boolean',
+        'pet_status'=> 'int',
         'pet_age' => 'int',
         'description'=> 'string'
     ];

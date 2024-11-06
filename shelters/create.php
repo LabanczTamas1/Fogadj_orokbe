@@ -2,11 +2,10 @@
 require_once __DIR__ . '/../lib/autoload.php';
 new App\Template('upload_shelter','empty');
 
-use App\Controllers\PostController;
-
+use App\Controllers\ShelterController;
 
 if (isset($_POST["submit"])) {
-    $upload = new PostController();
+    $upload = new ShelterController();
     $upload->InsertPost($_POST);
 }
 ?>
@@ -35,14 +34,9 @@ if (isset($_POST["submit"])) {
         <div id="preview-container">
     <img id="preview-image" src="" alt="Image Preview" style="display:none; max-width: 100%; height: auto;"/>
 </div>
-
     </div>
+    <input type="text" name="shelter_name" class="form-input" placeholder="Menhely neve" required/>
 
-    <input type="text" name="shelter-name" class="form-input" placeholder="Menhely neve" required/>
-
-   
-
-    <input type="text" name="country" class="form-input" placeholder="Ország" required/>
     <input type="text" name="city" class="form-input" placeholder="Város" required/>
 
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">

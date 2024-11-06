@@ -11,6 +11,7 @@ class Shelter extends Model
         'id' => 'int',
         'shelter_name' => 'string',
         'city' => 'string',
+        'img' => 'string',
         'description' => 'string'
     ];
 }

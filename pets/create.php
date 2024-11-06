@@ -4,8 +4,6 @@ new App\Template('upload_pet','empty');
 
 use App\Controllers\PostController;
 
-$continents = new App\Models\Continents;
-
 if (isset($_POST["submit"])) {
     $upload = new PostController();
     $upload->InsertPost($_POST);
@@ -37,18 +35,16 @@ if (isset($_POST["submit"])) {
 
     </div>
 
-    <input type="text" name="post_name" class="form-input" placeholder="Cím" required/>
+    <input type="text" name="postname" class="form-input" placeholder="Cím" required/>
 
-    <select id="continent" class="filter-select" name="select">
-        <option value="0">Összes Kontinens</option>
-        <?php foreach ($continents->all() as $continent) : ?>
-            <option value="<?= $continent->id ?>" class="dropdown-text"><?= $continent->continent_name ?></option>
-        <?php endforeach ?>
-    </select>
+    <input type="text" name="shelter_name" class="form-input" disabled/>
+    <input type="text" name="shelter_id" class="form-input" hidden/>
 
-    <input type="text" name="country" class="form-input" placeholder="Ország" required/>
-    <input type="text" name="city" class="form-input" placeholder="Város" required/>
-    <textarea name="description" class="form-input" placeholder="Leírás" required></textarea>
+    <input type="text" name="pet_name" class="form-input" placeholder="Kisállat neve" required/>
+    <input type="text" name="pet_gender" class="form-input" placeholder="Kisállat neme" required/>
+    <input type="text" name="pet_breed" class="form-input" placeholder="Kisállat fajtája" required/>
+    <input type="number" name="pet_age" class="form-input" placeholder="Kisállat életkora" required/>
+    <textarea name="description" class="form-input" placeholder=" Kisállat története" required></textarea>
 
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>
