@@ -44,7 +44,7 @@ if (isset($_POST["submit"])) {
     <input type="text" name="pet_gender" class="form-input" placeholder="Kisállat neme" required/>
     <input type="text" name="pet_breed" class="form-input" placeholder="Kisállat fajtája" required/>
     <input type="number" name="pet_age" class="form-input" placeholder="Kisállat életkora" required/>
-    <textarea name="description" class="form-input" placeholder=" Kisállat története" required></textarea>
+    <textarea name="description" class="form-input" placeholder="Kisállat története" required></textarea>
 
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>

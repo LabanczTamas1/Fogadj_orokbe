@@ -6,7 +6,7 @@ use App\Controllers\ShelterController;
 
 if (isset($_POST["submit"])) {
     $upload = new ShelterController();
-    $upload->InsertPost($_POST);
+    $upload->shelterUpload($_POST);
 }
 ?>
 
@@ -38,6 +38,8 @@ if (isset($_POST["submit"])) {
     <input type="text" name="shelter_name" class="form-input" placeholder="Menhely neve" required/>
 
     <input type="text" name="city" class="form-input" placeholder="Város" required/>
+
+    <textarea name="description" class="form-input" placeholder="Menhely leírása" required></textarea>
 
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>
