@@ -10,8 +10,7 @@ if (isset($_POST["submit"])) {
 }
 ?>
 
-<!-- Add back the form structure here -->
-<h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
+
 
 <div class="form-container">
 <h6 id="upload-name">Menhely feltöltése</h6>
@@ -39,7 +38,7 @@ if (isset($_POST["submit"])) {
 
     <input type="text" name="city" class="form-input" placeholder="Város" required/>
 
-    <textarea name="description" class="form-input" placeholder="Menhely leírása" required></textarea>
+    <textarea name="description" class="form-input-description" placeholder="Menhely leírása" required></textarea>
 
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>

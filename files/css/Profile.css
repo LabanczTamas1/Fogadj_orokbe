@@ -1,0 +1,35 @@
+.settings-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-profile a{
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 38px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.container-profile a:first-child{
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 38px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+.shelter-upload-link{
+    position: absolute;
+    right: 15px;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 38px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
