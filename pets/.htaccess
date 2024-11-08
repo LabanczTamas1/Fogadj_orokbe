@@ -1,0 +1,10 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+RewriteRule ^([^/\.]+)/?$ show.php?slug=$1
+
+
+
+RewriteCond %{REQUEST_URI} !^/shelters/index.php$
+RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+RewriteRule ^ %{REQUEST_URI}.php [L]

@@ -18,6 +18,7 @@ class Pet extends Model
         'pet_breed'=> 'string',
         'pet_status'=> 'int',
         'pet_age' => 'int',
-        'description'=> 'string'
+        'description'=> 'string',
+        'img' => 'string'
     ];
 }

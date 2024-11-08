@@ -38,6 +38,7 @@ CREATE TABLE pet_posts (
     pet_status TINYINT(1),
     pet_age INT(11),
     description VARCHAR(255),
+    img VARCHAR(255),
     PRIMARY KEY (id),
     FOREIGN KEY (shelter_id) REFERENCES shelter(id) ON DELETE CASCADE,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE

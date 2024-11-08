@@ -18,7 +18,11 @@ class LoginController {
             if (password_verify($password, $passwordpass)) {
                 if ($session->create($concrateUser -> id)) {
                     Tools::FlashMessage('Sikeres bejelentkezés! Üdv ' . $concrateUser -> fullname, 'success');
-                    header('Location: /');
+                    if($concrateUser->type === 'User'){
+                        header('Location: /pages/chooseOption');
+                    }else{
+                        header('Location: /');
+                    }
                 };
             } else {
                 $wrongpassword = "Nem megfelelő a jelszó!";

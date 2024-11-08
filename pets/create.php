@@ -1,12 +1,13 @@
 <?php
+use App\Helper;
 require_once __DIR__ . '/../lib/autoload.php';
 new App\Template('upload_pet','empty');
 
-use App\Controllers\PostController;
-
+if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
+    header('Location: /');
+}
 if (isset($_POST["submit"])) {
-    $upload = new PostController();
-    $upload->InsertPost($_POST);
+ 
 }
 ?>
 
@@ -31,21 +32,21 @@ if (isset($_POST["submit"])) {
         </label>
         <div id="preview-container">
     <img id="preview-image" src="" alt="Image Preview" style="display:none; max-width: 100%; height: auto;"/>
-</div>
+    </div>
 
     </div>
 
     <input type="text" name="postname" class="form-input" placeholder="Cím" required/>
-
     <input type="text" name="shelter_name" class="form-input" disabled/>
     <input type="text" name="shelter_id" class="form-input" hidden/>
-
     <input type="text" name="pet_name" class="form-input" placeholder="Kisállat neve" required/>
     <input type="text" name="pet_gender" class="form-input" placeholder="Kisállat neme" required/>
     <input type="text" name="pet_breed" class="form-input" placeholder="Kisállat fajtája" required/>
     <input type="number" name="pet_age" class="form-input" placeholder="Kisállat életkora" required/>
     <textarea name="description" class="form-input" placeholder="Kisállat története" required></textarea>
-
+    <select id="type"  name="type">
+            
+        </select>
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>
 
