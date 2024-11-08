@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="<?= $this->asset('css/Sign.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/ShelterCard.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Upload.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/Profile.css'); ?>">
 <script src="<?= $this->asset('bootstrap.bundle.min.js'); ?>"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
