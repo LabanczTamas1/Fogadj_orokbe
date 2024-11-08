@@ -10,7 +10,7 @@
             <a href="/../userhandle/register">Regisztráció</a>
             <a href="/../userhandle/login">Bejelentkezés</a>
         <?php else : ?>
-            <a href="/../pages/profile"><?= htmlspecialchars(App\Helper::user()->username) ?></a>
+            <a href="/../pages/profile"><?= htmlspecialchars(App\Helper::user()->username) ?> <i class="fa-solid fa-user"></i></a>
             <a href="/../userhandle/logout">Kijelentkezés</a>
             
             <?php if (App\Helper::user()->type === 'Shelter') : ?>
