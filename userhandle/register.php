@@ -24,8 +24,8 @@ if (isset($_POST["regist"])) {
     <div>
         <input type="password" name="passwd2" id="passwd2_value" placeholder="Jelszó megerősítése" required>
     </div>
-        <select id="type"  name="type">
-            <option value="User"  selected>Felhasználó</option>
+        <select id="type"  name="type" placeholder="Felhasználó">
+            <option value="User" selected>Felhasználó</option>
             <option value="Shelter" >Menhely</option>
         </select>
     <div>
