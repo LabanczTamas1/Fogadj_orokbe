@@ -7,6 +7,7 @@ USE fogadj_orokbe;
 CREATE TABLE shelter (
     id INT(11) NOT NULL AUTO_INCREMENT,
     shelter_name VARCHAR(255),
+    shelter_slug VARCHAR(255),
     city VARCHAR(255),
     img VARCHAR(255),
     description VARCHAR(255),

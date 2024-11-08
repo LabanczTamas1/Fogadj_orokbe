@@ -10,6 +10,7 @@ class Shelter extends Model
     public array $attributes = [
         'id' => 'int',
         'shelter_name' => 'string',
+        'shelter_slug' => 'string',
         'city' => 'string',
         'img' => 'string',
         'description' => 'string'
