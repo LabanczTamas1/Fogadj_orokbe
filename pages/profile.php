@@ -11,7 +11,7 @@ if(!Helper::isAuth()){
 
 
 <div class="container-profile">
-    <?php if($user->type == 'Shelter') {?>
+    <?php if(Helper::user()->type== 'Shelter') {?>
     <a href="/../pets/create.php">+ Kisállat hozzáadása</a>
 
     <a href="/../shelters/create.php">+ Menhely hozzáadása</a>
@@ -19,7 +19,7 @@ if(!Helper::isAuth()){
     <div class="settings-container">
 <form class="upload-form" method="post" enctype="multipart/form-data">
 <h5>Felhasználónév megváltoztatása</h5>
-<input type="text" name="username" class="form-input" placeholder="<?=$user->username?>" required/>
+<input type="text" name="username" class="form-input" placeholder="<?=Helper::user()->username?>" required/>
 <button type="submit" name="userupdate" class="upload-button">Megváltoztatása</button>
 </form>
 <div class="line"></div>

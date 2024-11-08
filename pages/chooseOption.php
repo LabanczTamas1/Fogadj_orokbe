@@ -18,7 +18,7 @@ new App\Template('chooseOption','empty');
         </a>
 
         <!-- Right Card for Örökbefogadásra váró állatok -->
-        <a href="pets.php">
+        <a href="../pets">
         <div class="card-u">
                 <div class="title">Örökbefogadásra váró állatok!</div>
                 <img src="/files/img/image2.png" alt="Animals waiting for adoption">

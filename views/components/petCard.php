@@ -3,7 +3,7 @@ function post_item(array $pet_card)
 {
 ?>
     <div class="pet-card">
-        <img src="/../../files/img/<?=$pet_card['img']?>" alt="Person holding a dog">
+        <img src="/../../files/pet_image/<?=$pet_card['img']?>" alt="Person holding a dog">
         <div class="pet-information">
             <div class="pet-name">
                 <?=$pet_card['pet_name']?>
@@ -12,7 +12,7 @@ function post_item(array $pet_card)
                 <?=$pet_card['pet_breed']?>
             </div>
             <div class="pet-gender">
-                <?=$pet_card['pet_gendre']?>
+                <?=$pet_card['pet_gender']?>
             </div>
             <div class="pet-age">
                 <?=$pet_card['pet_age']?>
