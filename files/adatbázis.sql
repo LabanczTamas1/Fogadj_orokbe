@@ -3,6 +3,17 @@ DROP DATABASE IF EXISTS fogadj_orokbe;
 CREATE DATABASE fogadj_orokbe;
 USE fogadj_orokbe;
 
+-- Table: users (ezt előbb kell létrehozni, mert a shelter tábla hivatkozik rá)
+CREATE TABLE users (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    type ENUM('Developer', 'User', 'Shelter'),
+    shelter_name VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
 -- Table: shelter
 CREATE TABLE shelter (
     id INT(11) NOT NULL AUTO_INCREMENT,
@@ -11,17 +22,8 @@ CREATE TABLE shelter (
     city VARCHAR(255),
     img VARCHAR(255),
     description VARCHAR(255),
-    PRIMARY KEY (id)
-);
-
--- Table: users
-CREATE TABLE users (
-    id INT(11) NOT NULL AUTO_INCREMENT,
-    username VARCHAR(255),
-    email VARCHAR(255),
-    password VARCHAR(255),
-    type ENUM('Developer', 'User', 'Shelter'),
-    shelter_name VARCHAR(255),
+    user_id INT(11),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     PRIMARY KEY (id)
 );
 
@@ -44,24 +46,13 @@ CREATE TABLE pet_posts (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Table: comment
-CREATE TABLE comment (
-    id INT(11) NOT NULL AUTO_INCREMENT,
-    comment VARCHAR(255),
-    user_id INT(11),
-    shelter_id INT(11),
-    PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (shelter_id) REFERENCES shelter(id) ON DELETE CASCADE
-);
-
 -- Table: form
 CREATE TABLE form (
     id INT(11) NOT NULL AUTO_INCREMENT,
     fullname VARCHAR(255),
     email VARCHAR(50),
     message VARCHAR(255),
-    pet_id INT(11),
+    pet_id INT(11) DEFAULT NULL, -- engedélyezve a NULL érték
     shelter_id INT(11),
     PRIMARY KEY (id),
     FOREIGN KEY (pet_id) REFERENCES pet_posts(id) ON DELETE SET NULL,

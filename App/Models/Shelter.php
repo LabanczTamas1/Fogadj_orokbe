@@ -13,6 +13,7 @@ class Shelter extends Model
         'shelter_slug' => 'string',
         'city' => 'string',
         'img' => 'string',
-        'description' => 'string'
+        'description' => 'string',
+        'user_id'
     ];
 }

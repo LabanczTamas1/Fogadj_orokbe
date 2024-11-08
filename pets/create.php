@@ -9,6 +9,8 @@ if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
 if (isset($_POST["submit"])) {
  
 }
+$sheltersModel= new App\Models\Shelter;
+$shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
 ?>
 
 <!-- Add back the form structure here -->
@@ -37,16 +39,17 @@ if (isset($_POST["submit"])) {
     </div>
 
     <input type="text" name="postname" class="form-input" placeholder="Cím" required/>
-    <input type="text" name="shelter_name" class="form-input" disabled/>
     <input type="text" name="shelter_id" class="form-input" hidden/>
     <input type="text" name="pet_name" class="form-input" placeholder="Kisállat neve" required/>
     <input type="text" name="pet_gender" class="form-input" placeholder="Kisállat neme" required/>
     <input type="text" name="pet_breed" class="form-input" placeholder="Kisállat fajtája" required/>
     <input type="number" name="pet_age" class="form-input" placeholder="Kisállat életkora" required/>
+    <select id="shelter_id"  name="shelter_id">
+            <?php foreach($shelters as $shelter): ?>
+                <option value="<?=$shelter->id?>" ><?=$shelter->shelter_name?></option>
+            <?php endforeach;?>
+    </select>
     <textarea name="description" class="form-input" placeholder="Kisállat története" required></textarea>
-    <select id="type"  name="type">
-            
-        </select>
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>
 
