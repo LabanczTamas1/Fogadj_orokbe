@@ -10,7 +10,7 @@ new App\Template('chooseOption','empty');
 
 <div class="container-choose">
         <!-- Left Card for Menhelyek -->
-        <a href="shelters.php">
+        <a href="../shelters">
             <div class="card-u">
                 <div class="title">Menhelyek</div>
                 <img src="/files/img/image1.png" alt="Shelter Image">

@@ -3,16 +3,19 @@ require_once __DIR__ . '/../lib/autoload.php';
 use App\Helper;
 
 new App\Template('chooseOption','empty');
-
+if(!Helper::isAuth()){
+    header('Location: /');
+}
 
 ?>
 
 
 <div class="container-profile">
+    <?php if($user->type == 'Shelter') {?>
     <a href="/../pets/create.php">+ Kisállat hozzáadása</a>
 
     <a href="/../shelters/create.php">+ Menhely hozzáadása</a>
-
+    <?php }?>
     <div class="settings-container">
 <form class="upload-form" method="post" enctype="multipart/form-data">
 <h5>Felhasználónév megváltoztatása</h5>

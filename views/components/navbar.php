@@ -1,14 +1,22 @@
 <nav class="navbar">
-    <div class="logo" style=""><a href="/">Fogadj örökbe!</a></div>
+    <div class="logo">
+        <a href="/">Fogadj örökbe!</a>
+    </div>
     <div class="nav-links">
         <a href="/shelters">Menhelyek</a>
-    <a href="/../pages/chooseOption">Ideiglenes link</a>
-    <?php if(!App\Helper::isAuth()) :?>
-        <a href="/../userhandle/register">Regisztráció</a>
-        <a href="/../userhandle/login">Bejelentkezés</a>
-        <?php else :?>
-           <a href="/../pages/profile"><?= App\Helper::user()->username ?></a> 
+        <a href="/../pages/chooseOption">Ideiglenes link</a>
+        
+        <?php if (!App\Helper::isAuth()) : ?>
+            <a href="/../userhandle/register">Regisztráció</a>
+            <a href="/../userhandle/login">Bejelentkezés</a>
+        <?php else : ?>
+            <a href="/../pages/profile"><?= htmlspecialchars(App\Helper::user()->username) ?></a>
             <a href="/../userhandle/logout">Kijelentkezés</a>
+            
+            <?php if (App\Helper::user()->type === 'Shelter') : ?>
+                <a href="/../pets/create.php">+ Kisállat hozzáadása</a>
+                <a href="/../shelters/create.php">+ Menhely hozzáadása</a>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 </nav>
