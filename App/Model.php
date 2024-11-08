@@ -1,75 +1,85 @@
 <?php
+
 namespace App;
+
 use App\Database;
+
 class Model
 {
-    public string $table;
+
+    protected string $table;
+
     protected $primaryKey = 'id';
+
     protected array $attributes;
-    protected static Database $DB;
+
+    private static Database $DB;
+
     function __construct($param = null)
     {
         if ($param) $this->create($param);
 
         self::$DB = new Database;
     }
-    public function createCollection(array $query)
+
+    public function createCollection(array $query): array
     {
         $modelArray = array();
 
         $modelClass = get_class($this);
 
         $refl = new \ReflectionClass($modelClass);
-        foreach ($query as $item) {
-            array_push($modelArray, new $refl->name($item));
 
+        foreach ($query as $item) {
+
+            array_push($modelArray, new $refl->name($item));
         }
         return $modelArray;
     }
-    
-    public function create($attributes)
-    {
-        $this->attributes = $attributes;
-        return $this;
-    }
 
-    public function all()
+
+    public function all(): array
     {
         $modelArray = array();
+
         $query = self::$DB->read($this->table);
+
         $modelArray = $this->createCollection($query);
+
         return $modelArray;
     }
 
     public function getItemById(int $id)
     {
-        $result = self::$DB->readOne($this->table, $id);
-        if (!isset($result["id"])){
-            $result = $result[0];
-        }
-        return $this->create($result);
+        return $this->create(self::$DB->readOne($this->table, $id)[0]);
     }
 
     public function getItemBy(string $column, string $value)
     {
-        $result = self::$DB->getItemByValue($this->table,$column,$value);
-        if($result){
+        $result = self::$DB->getItemByValue($this->table, $column, $value);
+        if ($result) {
             return $this->create($result[0]);
-        }else{
+        } else {
             return false;
         }
     }
 
     public function getItemsBy(string $column, string $value)
     {
-        $query = self::$DB->getItemByValue($this->table,$column,$value);
+        $query = self::$DB->getItemByValue($this->table, $column, $value);
         $collection = array();
         $collection = $this->createCollection($query);
-        if($collection){
+        if ($collection) {
             return $collection;
-        }else{
+        } else {
             return false;
         }
+    }
+
+    public function create($attributes)
+    {
+        $this->attributes = $attributes;
+        return $this;
     }
 
     public function save()
@@ -78,19 +88,7 @@ class Model
             $data = $this->attributes;
             self::$DB->insert($this->table, $data);
         } catch (\Exception $ex) {
-            print_r($data);
             echo 'hiba a mentésnél: <br> ' . $ex->getMessage();
-            return false;
-        }
-        return true;
-    }
-    
-    public function delete(){
-        try {
-            
-            self::$DB->delete($this->table,$this->id);
-        } catch (\Exception $ex) {
-            echo 'hiba a törlésnél: <br> ' . $ex->getMessage();
             return false;
         }
         return true;
@@ -98,18 +96,16 @@ class Model
 
     public function update()
     {
-        try {
-            $data = $this->attributes;
-            self::$DB->update($this->table, $data, $this->id);
-        } catch (\Exception $ex) {
-            echo 'hiba a módosításnál: <br> ' . $ex->getMessage();
-            return false;
-        }
         return true;
     }
-    public function __get($attribute)
+
+    public function get($param = null)
     {
-        return $this->attributes[$attribute];
+        if ($param) {
+            return $this->attributes[$param];
+        } else {
+            return $this->attributes;
+        }
     }
 
     public function set($attribute, $data)
@@ -120,21 +116,6 @@ class Model
         $this->attributes[$attribute] = $data;
         return true;
     }
-    
-    public function filter(array $filters)
-    {
-
-        $query = self::$DB->filter($this->table, $filters);
-
-        $collection = $this->createCollection($query);
-
-        if ($collection) {
-            return $collection;
-        } else {
-            return false;
-        }
-    }
-
     public function search(string $searchTerm, array $attributes)
     {
         $result = null;
@@ -146,14 +127,14 @@ class Model
 
         return $result;
     }
-    public  function count($column,$id){
-        $result = self::$DB->count($this->table,$column,$id);
-        if(empty($result)){
-        return false;
-        }
-        else{
-            return $result;
-        }
+    public function slug()
+    {
+        $slug = $this->attributes['name'];
+        return $slug;
+    }
 
+    public function __get($attribute)
+    {
+        return $this->attributes[$attribute];
     }
 }

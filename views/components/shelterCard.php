@@ -1,14 +1,20 @@
-<div class="shelter-card">
-    <img src="/../../files/img/SPEEDY2-768x1253.jpg" alt="Person holding a dog">
-    <div class="shelter-information">
-        <div class="shelter-name">
-            Name of the menhely
+<?php
+function shelter_card(array $array)
+{
+?>
+    <div class="shelter-card">
+        <img src="/../../files/shelter_image/<?=$array['img']?>" alt="<?=$array['shelter_name']?>">
+        <div class="shelter-information">
+            <div class="shelter-name">
+            <?=$array['shelter_name']?>
+            </div>
+            <div class="shelter-location">
+            <?=$array['city']?>
+            </div>
         </div>
-        <div class="shelter-location">
-            Location
-        </div>
+        <div class="linky">
+        <button href="/../pages/pets" class="shelter-button">x darab kisállat</button>
     </div>
-    <div class="linky">
-    <button href="/../pages/pets" class="shelter-button">x darab kisállat</button>
-  </div>
-</div>
+    </div>
+<?php
+}
