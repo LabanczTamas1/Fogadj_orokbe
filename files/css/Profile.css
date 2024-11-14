@@ -33,3 +33,23 @@
     padding-right: 5px;
     padding-left: 5px;
 }
+
+.profile-delete-button{
+    color: white;
+    font-size: 24px;
+    background-color: #B0846D;
+    margin-bottom: 0px !important;
+    text-align: center;
+    width: 274px;
+    padding: 0px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.container-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

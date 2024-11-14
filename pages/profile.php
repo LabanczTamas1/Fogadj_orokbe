@@ -28,5 +28,7 @@ if(!Helper::isAuth()){
         <input type="password" name="password" class="form-input" placeholder="Jelszó" required/>
         <button type="submit" name="passwordupdate" class="upload-button">Megváltoztatása</button>
     </form>
-</div>
+    
+    </div>
+    <button type="submit" name="passwordupdate" class="profile-delete-button">Fiókom törlése</button>
 </div>
