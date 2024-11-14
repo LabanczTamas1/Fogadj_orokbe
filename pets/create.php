@@ -2,12 +2,13 @@
 use App\Helper;
 require_once __DIR__ . '/../lib/autoload.php';
 new App\Template('upload_pet','empty');
-
+use App\Controllers\PetController;
 if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
     header('Location: /');
 }
 if (isset($_POST["submit"])) {
- 
+    $pet = new PetController();
+    $pet->insertPet($_POST);
 }
 $sheltersModel= new App\Models\Shelter;
 $shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
@@ -39,7 +40,6 @@ $shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
     </div>
 
     <input type="text" name="postname" class="form-input" placeholder="Cím" required/>
-    <input type="text" name="shelter_id" class="form-input" hidden/>
     <input type="text" name="pet_name" class="form-input" placeholder="Kisállat neve" required/>
     <input type="text" name="pet_gender" class="form-input" placeholder="Kisállat neme" required/>
     <input type="text" name="pet_breed" class="form-input" placeholder="Kisállat fajtája" required/>
@@ -52,5 +52,4 @@ $shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
     <textarea name="description" class="form-input" placeholder="Kisállat története" required></textarea>
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>
-
 <script src="../files/js/image-preview.js"></script>
