@@ -27,3 +27,4 @@
         window.location.href = url;
     }
 </script>
+<script src="<?= $this->asset('js/main.js'); ?>"></script>
