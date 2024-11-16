@@ -96,6 +96,13 @@ class Model
 
     public function update()
     {
+        try {
+            $data = $this->attributes;
+            self::$DB->update($this->table, $data, $this->id);
+        } catch (\Exception $ex) {
+            echo 'hiba a módosításnál: <br> ' . $ex->getMessage();
+            return false;
+        }
         return true;
     }
 

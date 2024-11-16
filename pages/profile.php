@@ -3,8 +3,17 @@ require_once __DIR__ . '/../lib/autoload.php';
 use App\Helper;
 
 new App\Template('chooseOption','empty');
-if(!Helper::isAuth()){
-    header('Location: /');
+
+if (!Helper::isAuth()) header('Location: /');
+
+
+if (isset($_POST['passwordupdate'])) {
+    Helper::user()->updateUserPassword($_POST);
+
+}
+if(isset($_POST['userupdate'])){
+    Helper::user()->updateProfileData($_POST);
+
 }
 
 ?>
