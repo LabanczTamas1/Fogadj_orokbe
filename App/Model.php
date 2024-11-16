@@ -137,4 +137,18 @@ class Model
     {
         return $this->attributes[$attribute];
     }
+
+    public function filter(array $filters)
+    {
+
+        $query = self::$DB->filter($this->table, $filters);
+
+        $collection = $this->createCollection($query);
+
+        if ($collection) {
+            return $collection;
+        } else {
+            return false;
+        }
+    }
 }
