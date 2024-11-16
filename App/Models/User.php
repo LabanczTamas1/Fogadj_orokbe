@@ -36,5 +36,28 @@ class User extends Model
             \App\Tools::FlashMessage('Hiba.', 'danger');
             return false;
         }
+
+    }
+
+    public function updateProfileData($post){
+        if ($post) {
+            $this->set('username', $post['username']);
+            try {
+                print_r($this);
+                if ($this->update()) {
+                    $destroy = new SessionController;
+                    $destroy->destroy();
+                    header("Location:/");
+                    \App\Tools::FlashMessage('Sikeresen megváltoztatta jelszavát.', 'success');
+                }
+            } catch (\Exception $e) {
+                \App\Tools::FlashMessage("Valami hiba történt.");
+                echo $e;
+                return false;
+            }
+        }else {
+            \App\Tools::FlashMessage('Hiba.', 'danger');
+            return false;
+        }
     }
 }
