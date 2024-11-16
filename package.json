@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "puppeteer": "^23.8.0"
+  },
+  "devDependencies": {
+    "cypress": "^13.15.2"
   }
 }
