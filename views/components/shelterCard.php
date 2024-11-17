@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="styles.css">
 <?php
 function shelter_card(array $array)
 {
