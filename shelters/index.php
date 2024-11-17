@@ -10,17 +10,19 @@ $shelters = $shelterModel->all();
 
 ?>
 
-
+<div class="container my-5">
 <?php
     if($shelters){
         foreach ($shelters as $shelter) { 
             shelter_card([
                 'shelter_name' => $shelter->shelter_name,
                 'city' => $shelter->city,
-                'img' => $shelter->img
+                'img' => $shelter->img,
+                'slug' => $shelter->shelter_slug
             ]);
         }
     }else{
         echo 'Nincsen megjelníthető menhely!';
     }
 ?>
+</div>

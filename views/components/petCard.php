@@ -2,7 +2,7 @@
 function post_item(array $pet_card)
 {
 ?>
-    <div class="pet-card">
+    <div class="pet-card" onclick="document.navigateTo('<?= $pet_card['slug'] ?>')">
         <img src="/../../files/pet_image/<?=$pet_card['img']?>" alt="Person holding a dog">
         <div class="pet-information">
             <div class="pet-name">

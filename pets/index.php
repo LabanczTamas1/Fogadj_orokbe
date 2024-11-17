@@ -37,7 +37,8 @@ if($shelter_filter ){
                 'pet_breed' => $pet->pet_breed,
                 'pet_gender' => $pet->pet_gender,
                 'pet_age' => $pet->pet_age,
-                'pet_description' => $pet->description
+                'pet_description' => $pet->description,
+                'slug' => $pet->slug
             ]);
         }
     }else{
