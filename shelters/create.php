@@ -1,13 +1,18 @@
 <?php
+use App\Helper;
 require_once __DIR__ . '/../lib/autoload.php';
 new App\Template('upload_shelter','empty');
 
 use App\Controllers\ShelterController;
-
+if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
+    header('Location: /');
+}
 if (isset($_POST["submit"])) {
     $upload = new ShelterController();
     $upload->shelterUpload($_POST);
 }
+$sheltersModel= new App\Models\Shelter;
+$shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
 ?>
 
 
@@ -32,7 +37,7 @@ if (isset($_POST["submit"])) {
         </label>
         <div id="preview-container">
     <img id="preview-image" src="" alt="Image Preview" style="display:none; max-width: 100%; height: auto;"/>
-</div>
+    </div>
     </div>
     <input type="text" name="shelter_name" class="form-input" placeholder="Menhely neve" required/>
 
