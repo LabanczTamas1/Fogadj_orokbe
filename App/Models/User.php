@@ -2,6 +2,7 @@
 namespace App\Models;
 
 use App\Model;
+use App\Controllers\SessionController;
 
 class User extends Model
 {

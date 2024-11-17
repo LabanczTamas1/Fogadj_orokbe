@@ -26,11 +26,15 @@ require_once '../views/components/shelterCard.php';
 <div class="container">
 <?php
     if($shelter){
+        $ownsByTheUserBool = $user ? $pet->ownsByTheUser($user->id) : false;
+        $type = $user ? $user->type :false;
             shelter_card([
                 'shelter_name' => $shelter->shelter_name,
                 'city' => $shelter->city,
                 'img' => $shelter->img,
-                'slug' => $shelter->shelter_slug
+                'slug' => $shelter->shelter_slug,
+                'auth' => $ownsByTheUserBool,
+                'type' => $type
             ]);
         
     }else{
