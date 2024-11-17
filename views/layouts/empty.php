@@ -27,11 +27,6 @@
       <?php echo $content; ?>
     </main>
     
-</div>
-
-    
-  </div>
-  <?php $this->include('components/footer') ?>
 </body>
 
 </html>  

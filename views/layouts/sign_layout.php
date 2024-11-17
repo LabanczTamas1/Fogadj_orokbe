@@ -13,13 +13,9 @@
     <?php $this->include('components/navbar') ?>
 
     <main class="container" style="margin-top: 100px;">
-    <?php echo $content; ?>
-   
-    
+      <?php echo $content; ?>
     </main>
    
-
-    <?php $this->include('components/footer') ?>
   </div>
 </body>
 
