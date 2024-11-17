@@ -40,4 +40,31 @@ class Image{
         }
         return $filenewname;
     }
+    public static function RemoveUploadedImage($imagePath)
+    {
+        $imagePath = $GLOBALS['BASE_DIR'] . $imagePath;
+        if (unlink($imagePath)) {
+            return true;
+        }
+        return false;
+    }
+
+    public static function UpdateImage($oldImage, $newImage, $destination)
+    {
+
+        $errors = [];
+
+        if (!self::RemoveUploadedImage($destination . $oldImage)) {
+            array_push($errors, 'Hiba a törléssel');
+        }
+
+        if (empty($errors))
+            $newImage = self::ImageUpload($newImage, $destination);
+        if ($newImage)
+            return $newImage;
+        else
+            array_push($errors, 'Hiba a feltöltéssel');
+
+        return $errors;
+    }
 }
