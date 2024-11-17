@@ -33,4 +33,38 @@ class ShelterController {
         }
         return false;
     }
+    public function selterUpdate($arr){
+        global $user;
+        $shelterModel = new Shelter;
+        $shelter=$shelterModel->getItemById($arr['id']);
+        $shelter->set('shelter_name',str_replace("'", "",$arr['shelter_name']));
+        $shelter->set('shelter_slug',Tools::slugify($arr['shelter_name']));
+        $shelter->set('city',str_replace("'", "",$arr['city']));
+        $shelter->set('description',str_replace("'", "",$arr['description']));
+        $shelter->set('user_id',Helper::user()->id);
+
+        if ($_FILES && $_FILES['img']['name'] != "") {
+
+            $newImage = Image::UpdateImage($shelter->img, $_FILES, '/files/shelter_image');
+
+            if (is_array($newImage)) {
+                $errors = $newImage;
+
+                Tools::FlashMessage('Hiba a feltöltéssel: ' . $errors[0], 'danger');
+                return false;
+            }
+            $shelter->set('img', $newImage);
+        }else{
+            $shelter->set( 'img',$shelter->img);
+        }
+
+        try {
+            if ($shelter->update()) {
+                Tools::FlashMessage($shelter->shelter_name . ' módosítva', 'success');
+                header("Location: /");
+            }
+        } catch (\Exception $e) {
+            die();
+        }
+    }
 }
