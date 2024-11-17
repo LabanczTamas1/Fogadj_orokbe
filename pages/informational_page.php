@@ -76,10 +76,6 @@ new App\Template('chooseOption','empty');
         <div class="container">
             <h2>Fontos információk</h2>
             <div class="info">
-                <h3>Nyitva tartás</h3>
-                <p>Menhelyek számára a regisztráció 24/7 elérhető, de a menhelyek által kínált állatok megtekintésére és örökbefogadásra a menhelyek nyitvatartása szerint van lehetőség.</p>
-            </div>
-            <div class="info">
                 <h3>Kapcsolat</h3>
                 <p>Ha bárminemű kérdésed van, keresd fel ügyfélszolgálatunkat: </p>
                 <p>Email: info@allatmenhely.hu</p>

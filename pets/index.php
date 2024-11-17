@@ -31,6 +31,8 @@ if($shelter_filter ){
 <?php
     if($pets){
         foreach ($pets as $pet) { 
+            $ownsByTheUserBool = $user ? $pet->ownsByTheUser($user->id) : false;
+            $type = $user ? $user->type :false;
             post_item([
                 'img' => $pet->img,
                 'pet_name' => $pet->pet_name,
@@ -38,7 +40,9 @@ if($shelter_filter ){
                 'pet_gender' => $pet->pet_gender,
                 'pet_age' => $pet->pet_age,
                 'pet_description' => $pet->description,
-                'slug' => $pet->slug
+                'slug' => $pet->slug,
+                'auth' => $ownsByTheUserBool,
+                'type' => $type
             ]);
         }
     }else{

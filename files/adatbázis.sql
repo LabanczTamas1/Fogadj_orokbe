@@ -54,7 +54,9 @@ CREATE TABLE form (
     message VARCHAR(255),
     pet_id INT(11) DEFAULT NULL, -- engedélyezve a NULL érték
     shelter_id INT(11),
+    user_id INT(11),
     PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL,
     FOREIGN KEY (pet_id) REFERENCES pet_posts(id) ON DELETE SET NULL,
     FOREIGN KEY (shelter_id) REFERENCES shelter(id) ON DELETE CASCADE
 );
