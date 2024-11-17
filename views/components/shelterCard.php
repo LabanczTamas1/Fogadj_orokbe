@@ -2,7 +2,7 @@
 function shelter_card(array $array)
 {
 ?>
-    <div class="shelter-card" onclick="document.navigateTo('<?= $array['slug'] ?>')">
+    <div class="shelter-card" onclick="document.navigateTo('/shelters/<?= $array['slug'] ?>')">
         <img src="/../../files/shelter_image/<?=$array['img']?>" alt="<?=$array['shelter_name']?>">
         <div class="shelter-information">
             <div class="shelter-name">
