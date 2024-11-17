@@ -15,7 +15,6 @@
     <main class="container" style="margin-top: 100px;">
       <?php echo $content; ?>
     </main>
-   
   </div>
 </body>
 

@@ -13,12 +13,10 @@
 <body>
     <header>
         <?php $this->include('components/navbar') ?>
-
     </header>
 
-   
-        <?php $this->include('components/flashMessage') ?>
-        <?php echo $content ?>
+    <?php $this->include('components/flashMessage') ?>
+    <?php echo $content ?>
 
 </body>
 
