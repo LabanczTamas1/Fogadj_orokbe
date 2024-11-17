@@ -1,6 +1,6 @@
 .upload-form{
-    width: 658px;
-    height: 641px;
+    width: 800px;
+    height: auto;
     background-color: #305C60;
     display: flex;
     justify-content: center;
@@ -24,12 +24,12 @@
     color: white;
     font-size: 24px;
     background-color: #B0846D;
-    margin-bottom: 0px !important;
+    margin-bottom: 20px !important;
     text-align: center;
     width: 274px;
     padding: 0px 0;
-    display: inline-block;
     box-sizing: border-box;
+    margin-top: 50px;
 }
 
 .form-input-description{
@@ -37,23 +37,12 @@
     height: 120px;
     color: black;
     background-color: rgba(256, 256, 256, 0.48);
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 50px !important;
+    padding: 10px;
     border: 1px rgb(217, 217, 217) solid;
 }
 
 .upload-box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.upload-box input{
-    height: 100px;
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
 }
