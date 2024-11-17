@@ -25,8 +25,9 @@
     color: white;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 1rem;
+    font-size: 19px;
     transition: color 0.3s;
+    padding-left: 10px;
 }
 
 .logo a{
@@ -35,6 +36,6 @@
 }
 
 .nav-links a:hover, .logo a:hover{
-    color: #cccccc; /* Lighter color on hover */
-    text-decoration: none;
+    color: white;
+    text-decoration: underline;
 }
