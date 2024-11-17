@@ -49,7 +49,7 @@ $shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
                 <option value="<?=$shelter->id?>" ><?=$shelter->shelter_name?></option>
             <?php endforeach;?>
     </select>
-    <textarea name="description" class="form-input" placeholder="Kisállat története" required></textarea>
+    <textarea name="description" class="form-input-description" placeholder="Kisállat története" required></textarea>
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>
 <script src="../files/js/image-preview.js"></script>

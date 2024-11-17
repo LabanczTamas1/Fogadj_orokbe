@@ -3,8 +3,7 @@
         <a href="/">Fogadj örökbe!</a>
     </div>
     <div class="nav-links">
-        <a href="/shelters">Menhelyek</a>
-        <a href="/../pages/chooseOption">Ideiglenes link</a>
+        <a href="/../pages/chooseOption">Keresés</a>
         
         <?php if (!App\Helper::isAuth()) : ?>
             <a href="/../userhandle/register">Regisztráció</a>

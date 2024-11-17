@@ -4,9 +4,7 @@ use App\Helper;
 
 new App\Template('chooseOption','empty');
 
-
 ?>
-
 
 <div class="container-choose">
         <!-- Left Card for Menhelyek -->
