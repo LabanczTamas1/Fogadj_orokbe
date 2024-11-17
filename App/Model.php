@@ -144,6 +144,16 @@ class Model
     {
         return $this->attributes[$attribute];
     }
+    public function delete(){
+        try {
+            
+            self::$DB->delete($this->table,$this->id);
+        } catch (\Exception $ex) {
+            echo 'hiba a törlésnél: <br> ' . $ex->getMessage();
+            return false;
+        }
+        return true;
+    }
 
     public function filter(array $filters)
     {
