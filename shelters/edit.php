@@ -33,11 +33,12 @@ if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
     <img id="preview-image" src="" alt="Image Preview" style="display:none; max-width: 100%; height: auto;"/>
     </div>
     </div>
-    <input type="text" name="shelter_name" class="form-input" placeholder="<?=$shelter->shelter_name?>"  value="<?=$shelter->img?>" required/>
+    <input type="text" name="shelter_name" class="form-input" value="<?=$shelter->shelter_name?>" required/>
+    <input type="text" name="id" class="form-input" value="<?=$shelter->id?>" required/>
 
-    <input type="text" name="city" class="form-input" placeholder="<?=$shelter->city?>"  value="<?=$shelter->city?>" required/>
+    <input type="text" name="city" class="form-input"   value="<?=$shelter->city?>" required/>
 
-    <textarea name="description" class="form-input-description" placeholder="<?=$shelter->description?>"  value="<?=$shelter->description?>" required></textarea>
+    <textarea name="description" class="form-input-description" value="<?=$shelter->description?>" required></textarea>
 
     <input type="submit" name="submit" class="upload-button" value="Feltöltés">
 </form>

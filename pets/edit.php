@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
     <input type="text" name="user_id" class="form-input" value="<?=$pet->user_id;?>" required hidden/>
     <input type="text" name="pet_status" class="form-input" value="<?=$pet->pet_status;?>" required hidden/>
     <input type="text" name="id" class="form-input" value="<?=$pet->id;?>" required hidden/>
-    <input type="text" name="user_id" class="form-input" value="<?=$pet->pet_status;?>" required hidden/>
+    <input type="text" name="user_id" class="form-input" value="<?=$pet->user_id;?>" required hidden/>
     <input type="text" name="pet_name" class="form-input" value="<?=$pet->pet_name;?>" required/>
     <input type="text" name="pet_gender" class="form-input" value="<?=$pet->pet_gender;?>" required/>
     <input type="text" name="pet_breed" class="form-input" value="<?=$pet->pet_breed;?>" required/>
