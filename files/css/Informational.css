@@ -1,0 +1,236 @@
+.intro {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.intro .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* How it works section */
+.how-it-works {
+    padding: 40px 0;
+    background-color: #eef2f3;
+}
+
+.how-it-works .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.step {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1rem;
+}
+
+/* Information section */
+.information {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.information .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1rem;
+}
+
+.show-images{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Flip Card Container */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Defines how far the flip is */
+    width: 30%;
+    height: 300px; /* Ensure a fixed height for the flip cards */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensure that the content is properly clipped */
+    position: relative;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Flip speed */
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Rotate the card when hovered */
+}
+
+/* Front of the card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the backside when flipped */
+}
+
+.flip-card-front {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-back {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg); /* Flip the back side initially */
+}
+
+.flip-card-back a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.flip-card-back a:hover {
+    text-decoration: underline;
+}
+
+/* How it works section */
+.how-it-works {
+    padding: 40px 0;
+    background-color: #eef2f3;
+}
+
+.how-it-works .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.step {
+    width: 30%;
+    height: 300px; /* Ensure a fixed height for the flip cards */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensure that the content is properly clipped */
+    position: relative;
+}
+
+/* Add responsiveness to the flip card */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.show-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.show-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.show-images img {
+    opacity: 0;
+    transform: translateY(100px); /* Start with images out of view */
+    transition: opacity 3s ease, transform 0.5s ease; /* Smooth transition for in/out animation */
+}
+
+/* When the image is in view, add the 'visible' class */
+.show-images img.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move the image into view */
+}
+
+/* When the image leaves the viewport, add the 'hidden' class */
+.show-images img.hidden {
+    opacity: 0;
+    transform: translateY(-100px); /* Move the image up out of view */
+}
+
+/* Different delay for each image */
+.show-images img:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.show-images img:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.show-images img:nth-child(3) {
+    transition-delay: 0.4s;
+}

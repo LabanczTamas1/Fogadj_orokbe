@@ -8,6 +8,6 @@
                         segítesz nekik egy boldogabb életet kezdeni. Nézz körül, válaszd ki új legjobb barátodat, és
                         kezdjétek el együtt az új közös kalandot!
                     </p>
-                    <a href="#" class="btn">Tudj meg többet!</a>
+                    <a href="/../pages/informational_page.php" class="btn">Tudj meg többet!</a>
                 </div>
         </section>
