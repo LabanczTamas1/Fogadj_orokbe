@@ -23,6 +23,7 @@ if(isset($_POST['userupdate'])){
     <a href="/../pets/create.php" class="shelter-upload-link">+ Kisállat hozzáadása</a>
     <a href="/../shelters/create.php" class="shelter-upload-link">+ Menhely hozzáadása</a>
     <?php }?>
+    <a href="/../user/uploads" class="shelter-upload-link">Feltöltött</a>
 </div>
 
 <div class="container-profile">
@@ -37,6 +38,7 @@ if(isset($_POST['userupdate'])){
         <input type="password" name="password" class="form-input" placeholder="Jelszó" required/>
         <button type="submit" name="passwordupdate" class="upload-buttons">Megváltoztatása</button>
     </form>
+    
 </div>
 
     <button type="submit" name="passwordupdate" class="profile-delete-button">Fiókom törlése</button>
