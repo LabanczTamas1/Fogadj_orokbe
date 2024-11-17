@@ -10,9 +10,8 @@ body {
 }
 
 main{
-    height: 800px;
+  min-height: 800px;
 }
-
 
 /* Navigation bar styling */
 .navbar {

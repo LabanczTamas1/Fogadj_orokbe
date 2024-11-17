@@ -10,7 +10,7 @@ $shelters = $shelterModel->all();
 
 ?>
 
-<div class="container my-5">
+
 <?php
     if($shelters){
         foreach ($shelters as $shelter) { 
@@ -24,4 +24,3 @@ $shelters = $shelterModel->all();
         echo 'Nincsen megjelníthető menhely!';
     }
 ?>
-</div>

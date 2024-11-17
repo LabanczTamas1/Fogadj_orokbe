@@ -29,8 +29,9 @@
     
 </div>
 
-    <?php $this->include('components/footer') ?>
+    
   </div>
+  <?php $this->include('components/footer') ?>
 </body>
 
 </html>  
