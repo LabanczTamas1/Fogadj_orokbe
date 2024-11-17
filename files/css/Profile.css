@@ -1,6 +1,6 @@
 .settings-container{
     display: flex;
-    justify-content: space-between;
+    height: 500px;
 }
 
 .container-profile a{
@@ -11,10 +11,7 @@
     padding-left: 5px;
 }
 
-.container-profile a:first-child{
-    position: absolute;
-    left: 10px;
-    top: 70px;
+.shelter-upload-link{
     background-color: rgba(0, 0, 0, 0.45);
     color: white;
     font-size: 38px;
@@ -22,16 +19,8 @@
     padding-left: 5px;
 }
 
-
-.shelter-upload-link{
-    position: absolute;
-    right: 15px;
-    top: 70px;
-    background-color: rgba(0, 0, 0, 0.45);
+.shelter-upload-link:hover {
     color: white;
-    font-size: 38px;
-    padding-right: 5px;
-    padding-left: 5px;
 }
 
 .profile-delete-button{
@@ -47,9 +36,30 @@
     margin-top: 50px;
 }
 
+.upload-buttons {
+    color: white;
+    font-size: 24px;
+    background-color: #B0846D;
+    text-align: center;
+    width: 250px;
+    box-sizing: border-box;
+}
+
 .container-profile{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
+}
+
+.h5s {
+    font-size: 25px;
+    color: white;
+}
+
+.petsandshelter {
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 10px;
+    margin: 0;
 }
