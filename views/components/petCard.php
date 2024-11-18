@@ -2,9 +2,9 @@
 function post_item(array $pet_card)
 {
 ?>
-    <div class="pet-card">
+    <div class="cta">
         <img src="/../../files/pet_image/<?=$pet_card['img']?>" alt="Person holding a dog" onclick="document.navigateTo('/pets/<?= $pet_card['slug'] ?>')">
-        <div class="pet-information">
+        <div class="cta__text-column">
             <div class="pet-name"><?=$pet_card['pet_name']?></div>
             <div class="pet-breed"><?=$pet_card['pet_breed']?></div>
             <div class="pet-gender"><?=$pet_card['pet_gender']?></div>

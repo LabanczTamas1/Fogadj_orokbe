@@ -18,13 +18,13 @@ img {
 	width: 100%;
 }
 
-h2 {
+.pet-name {
 	margin: 0;
 	font-size: 1.4rem;
 }
 
 @media (min-width: 50em) {
-	h2 {
+	.pet-name {
 		font-size: 1.8rem;
 	}
 }
@@ -58,7 +58,7 @@ h2 {
 	margin: min(1.5rem, 2.5vw) 0 0 0;
 }
 
-.cta a {
+.shelter-button {
 	display: inline-block;
 	color: black;
 	padding: 0.5rem 1rem;
