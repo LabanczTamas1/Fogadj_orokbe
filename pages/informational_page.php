@@ -38,7 +38,7 @@ new App\Template('chooseOption','empty');
                 <p>Ha menhelyet üzemeltetsz, egyszerűen regisztrálj a platformon! Miután sikeresen regisztráltál, hozzáadhatod az állataidat, akik szeretnének új otthonra találni.</p>
             </div>
             <div class="flip-card-back">
-                <a href="regisztracio.html">Kattints ide a regisztrációhoz</a>
+                <a href="../userhandle/register">Kattints ide a regisztrációhoz</a>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@ new App\Template('chooseOption','empty');
             <p>Menhelyek adhatnak hozzá állatokat a rendszerhez, részletes információkkal és fényképekkel, hogy a potenciális örökbefogadók könnyebben választhassanak.</p>
             </div>
             <div class="flip-card-back">
-                <a href="regisztracio.html">Kattints ide a regisztrációhoz</a>
+                <a href="../userhandle/register">Kattints ide a regisztrációhoz</a>
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@ new App\Template('chooseOption','empty');
             <p>Örökbefogadók böngészhetnek a regisztrált állatok között, és egyszerűen kapcsolatba léphetnek a menhellyel az örökbefogadás megkezdéséhez.</p>
             </div>
             <div class="flip-card-back">
-                <a href="regisztracio.html">Kattints ide a regisztrációhoz</a>
+                <a href="../userhandle/register">Kattints ide a regisztrációhoz</a>
             </div>
         </div>
     </div>

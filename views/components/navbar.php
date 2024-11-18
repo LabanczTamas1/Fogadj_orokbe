@@ -15,6 +15,8 @@
                 <a href="/../pages/profile"><?= htmlspecialchars(App\Helper::user()->username) ?> <i class="fa-solid fa-user"></i></a>
                 <a href="/../userhandle/logout">Kijelentkezés</a>
             <?php endif; ?>
+            <a href="/../userhandle/logout">Kijelentkezés</a>
+
         <?php endif; ?> 
     </div>
 </nav>
