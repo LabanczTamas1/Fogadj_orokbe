@@ -19,17 +19,16 @@ class ShelterController {
             $data['img'] = $img;
         }
 
-        $shelter = new Shelter($data);
         try {
+            $shelter = new Shelter($data);
             if ($shelter->save()) {
-                Tools::FlashMessage($data['postname'] . ' hozzáadva', 'success');
-                header("Location: /");
+                Tools::FlashMessage($data['shelter_name'] . ' hozzáadva', 'success');
+                session_write_close(); 
+                header('Location: /');
                 exit;
             }
         } catch (\Exception $e) {
             Tools::FlashMessage("Hiba történt: " . $e->getMessage(), 'danger');
-            print_r($data);
-            die();
         }
         return false;
     }

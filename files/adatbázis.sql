@@ -55,6 +55,7 @@ CREATE TABLE form (
     pet_id INT(11) DEFAULT NULL, -- engedélyezve a NULL érték
     shelter_id INT(11),
     user_id INT(11),
+    slug VARCHAR(255),
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL,
     FOREIGN KEY (pet_id) REFERENCES pet_posts(id) ON DELETE SET NULL,

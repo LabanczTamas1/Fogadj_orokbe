@@ -11,6 +11,8 @@ RewriteRule ^([^/\.]+)/?$ $1.php [L]
 RewriteRule ^([^/\.]+)/?$ show.php?slug=$1 [L]
 RewriteRule ^([^/\.]+)/edit edit.php?slug=$1
 RewriteRule ^([^/\.]+)/delete delete.php?slug=$1
+RewriteRule ^([^/\.]+)/form form.php?slug=$1
+
 
 # Index.php kivételkezelés
 RewriteCond %{REQUEST_URI} !^/pets/index.php$

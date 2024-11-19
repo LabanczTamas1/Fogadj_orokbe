@@ -27,6 +27,7 @@ class PetController {
         try {
             if ($pet->save()) {
                 Tools::FlashMessage($data['postname'] . ' hozzáadva', 'success');
+                session_write_close(); 
                 header("Location: /");
                 exit;
             }

@@ -13,6 +13,8 @@ class Form extends Model
         'email' => 'string',
         'message' => 'string',
         'pet_id' => 'int',
-        'shelter_id' => 'int'
+        'shelter_id' => 'int',
+        'user_id' => 'int',
+        'slug' => 'string'
     ];
 }

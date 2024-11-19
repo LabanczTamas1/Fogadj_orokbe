@@ -11,7 +11,7 @@ function post_item(array $pet_card)
             <div class="pet-age">Kor:<?=$pet_card['pet_age']?></div>
             <div class="description" style="color: white;">Leírás:<?=$pet_card['pet_description']?></div>
             <div class="linky">
-            <button onclick="document.navigateTo('/../pages/pets'); return false;" class="shelter-button">Örökbefogadás</button>
+            <button onclick="document.navigateTo('/pets/<?= $pet_card['slug'] ?>/form'); return false;" class="shelter-button">Örökbefogadás</button>
 
             </div>
             <?php if ($pet_card['auth'] || $pet_card['type'] == 'Developer'): ?>

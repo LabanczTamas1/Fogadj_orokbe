@@ -236,3 +236,12 @@ main{
   #shelter{
     padding: 5px;
   }
+  .flash-container {
+    position: fixed;
+    z-index: 10001;
+    top:60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    height: min-content !important;
+}
