@@ -12,7 +12,7 @@ require_once '../views/components/shelterCard.php';
 ?>
 
 
-<div class="container my-5">
+<div class="container-pet">
 <?= $pet->postname;?>
 <?= $pet->pet_name;?>
 <?= $pet->pet_gender;?>

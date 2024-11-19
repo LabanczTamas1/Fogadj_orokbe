@@ -6,10 +6,10 @@ function post_item(array $pet_card)
     <img src="/../../files/pet_image/<?=$pet_card['img']?>" alt="Person holding a dog" onclick="document.navigateTo('/pets/<?= $pet_card['slug'] ?>')">
     <div class="pet-information">
     <div class="pet-name"><?=$pet_card['pet_name']?></div>
-            <div class="pet-breed"><?=$pet_card['pet_breed']?></div>
-            <div class="pet-gender"><?=$pet_card['pet_gender']?></div>
-            <div class="pet-age"><?=$pet_card['pet_age']?></div>
-            <div class="description"><?=$pet_card['pet_description']?></div>
+            <div class="pet-breed">Faj:<?=$pet_card['pet_breed']?></div>
+            <div class="pet-gender">Nem:<?=$pet_card['pet_gender']?></div>
+            <div class="pet-age">Kor:<?=$pet_card['pet_age']?></div>
+            <div class="description" style="color: white;">Leírás:<?=$pet_card['pet_description']?></div>
             <div class="linky">
             <button onclick="document.navigateTo('/../pages/pets'); return false;" class="shelter-button">Örökbefogadás</button>
 

@@ -1,13 +1,18 @@
 /* Container for the pet card */
 .pet-card {
     display: flex;                 
-    background-color: #305C60;     
+    background-color: #305C60 !important;  
+    width: 100% !important;   
     border-radius: 8px;           
-    overflow: hidden;              
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    max-width: 1200px;            
+    overflow: hidden;                       
     margin: 16px auto;
     height: 542px;           /* Center align and add spacing */
+    max-width: 100% !important;
+  }
+
+  .container-pet{
+    display: flex !important;
+    flex-direction: column !important;
   }
   
   /* Styling for the image */

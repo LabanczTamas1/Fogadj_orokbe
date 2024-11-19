@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="<?= $this->asset('css/Sign.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/ShelterCard.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Upload.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/PetCard.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Profile.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Informational.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/Card.css'); ?>">

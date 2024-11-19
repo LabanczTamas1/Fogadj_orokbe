@@ -27,7 +27,7 @@ if($shelter_filter ){
         </select>
     </div>
 </form>
-<div class="container my-5">
+<div class="container-pet">
 <?php
     if($pets){
         foreach ($pets as $pet) { 
