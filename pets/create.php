@@ -14,9 +14,16 @@ $sheltersModel= new App\Models\Shelter;
 $shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
 ?>
 
-<!-- Add back the form structure here -->
-<h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
-<h6>Feltöltés</h6>
+<style>
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+
+<h6 style="color: white; font-size: 32px;">Feltöltés</h6>
 
 <form class="upload-form" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF'] ?>">
     <?php if (!empty($errors)) : ?>
