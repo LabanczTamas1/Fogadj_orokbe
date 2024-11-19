@@ -16,8 +16,10 @@ function shelter_card(array $array)
         <button onclick="document.navigateTo('/shelters/<?= $array['slug'] ?>')" class="shelter-button" >x darab kisállat</button>
         </div>
         <?php if (($array['auth'] || $array['type'] == 'Developer') ): ?>
-                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/edit')"> módosítás</button> 
-                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/delete')">törlés</button>
+            <div id="card-buttons" style="display: flex; justify-content: space-between; width: 100%;">
+                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/edit')" style="background-color: #B0846D; margin-left: 5px;"> módosítás ↻</button>
+                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/delete')" style="background-color: #B0846D; margin-right: 5px;">🗑</button>
+            </div>
         <?php endif ?>
     </div>
 <?php

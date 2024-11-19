@@ -1,49 +1,67 @@
-.shelter-card{
+.shelter-card {
     width: 30% !important;
     height: 465px;
     background-color: #305C60 !important;
     overflow: hidden;
+    padding: 0 !important;
+    position: relative; /* Set position relative to position absolute children */
 }
 
-.container .my-5{
+.container .my-5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: flex-start;
 }
 
-.shelter-card img{
+.shelter-card img {
     width: 100%;
     height: 270px;
     object-fit: cover;
 }
 
-.shelter-information{
+.shelter-information {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
-.shelter-name{
+.shelter-name {
     font-size: 32px;
     color: white;
 }
 
-.shelter-location{
+.shelter-location {
     font-size: 20px;
     color: white;
     vertical-align: middle;
 }
 
-.linky button{
-    margin-top: 0;
+.linky {
+    position: absolute;
+    bottom: 0; /* Position the linky element at the bottom of the card */
+    width: 100%; /* Ensure the button takes up the full width */
+    padding: 10px; /* Add padding to give some space */
 }
 
-.shelter-button{
-    width: 100%;
+.linky button {
+    margin-top: 10px; /* Space between the buttons */
+}
+
+.shelter-button {
+    width: 95%;
     height: 46px;
     background-color: #B0846D;
     color: white;
     margin-top: 40px;
+}
+
+#card-buttons:hover{
+    background-color: #305C60;
+    color: unset !important;
+    border: unset !important;
+    text-decoration: none !important;
+    cursor: default !important;
+    box-shadow: none !important;
 }

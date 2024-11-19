@@ -57,25 +57,8 @@
     color: #d0d0d0;                /* Slightly muted white for body text */
   }
   
-  /* Button container */
-  .linky {
-    margin-top: 16px;
-  }
-  
-  /* Adoption button */
-  .shelter-button {
-    padding: 12px 24px;            /* Comfortable button size */  /* Button color matching design */
-    color: #ffffff;                /* Button text color */
-    border: none;                  /* Remove default button styles */
-    border-radius: 4px;            /* Rounded button */
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Button hover effect */
+
   .shelter-button:hover {
-    background-color: #7d3a78;     /* Darker shade on hover */
+    background-color: #7d3a78;
   }
   

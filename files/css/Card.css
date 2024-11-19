@@ -8,10 +8,7 @@
     max-width: 300px;
   }
   
-  .pet-card, .shelter-card :hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
-  }
+
   
   .pet-card, .shelter-card  h2 {
     font-size: 1.25rem;
