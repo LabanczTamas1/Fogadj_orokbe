@@ -232,3 +232,7 @@ main{
     background-color: rgba(256, 256, 256, 0);
     border: 0px;
   }
+
+  #shelter{
+    padding: 5px;
+  }
