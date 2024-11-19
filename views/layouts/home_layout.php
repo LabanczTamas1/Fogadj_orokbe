@@ -19,7 +19,9 @@ footer{
 
 <body class="helping_quary">
   <?php $this->include('components/navbar') ?>
-    <main class="container" style="margin-top: 100px;">   
+    <main class="container" style="margin-top: 100px;">  
+    <?php $this->include('components/flashMessage') ?>
+    <?php echo $content ?> 
   <?php $this->include('components/information') ?>
   </main>
 

@@ -16,8 +16,9 @@ function flashMessage()
     }
         // Unset the flash message after displaying it
         unset($_SESSION['flash_message']);
-    
+
 }
 
 flashMessage();
 ?>
+
