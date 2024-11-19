@@ -1,0 +1,76 @@
+/* Container for the pet card */
+.pet-card {
+    display: flex;                 
+    background-color: #305C60;     
+    border-radius: 8px;           
+    overflow: hidden;              
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 1200px;            
+    margin: 16px auto;
+    height: 542px;           /* Center align and add spacing */
+  }
+  
+  /* Styling for the image */
+  .pet-card img {
+    max-width: 50%;                    /* Image takes half the card width */
+    object-fit: cover;             /* Ensures the image fills its area */
+    height: auto;                  /* Maintain aspect ratio */
+  }
+  
+  /* Container for pet information */
+  .pet-information {
+    padding: 24px;                 /* Add spacing around the text */
+    display: flex;                 /* Use flexbox for vertical stacking */
+    flex-direction: column;        /* Stack elements vertically */
+    justify-content: center;       /* Center content vertically */
+    flex: 1;                       /* Use remaining space for text */
+    color: #ffffff;                /* White text for contrast */
+    font-family: Arial, sans-serif; /* Clean font */
+  }
+  
+  /* Pet name */
+  .pet-name {
+    font-size: 1.8rem;             /* Large, bold text */
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Pet details (breed, gender, age) */
+  .pet-breed,
+  .pet-gender,
+  .pet-age {
+    margin-bottom: 8px;            /* Spacing between details */
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* Description */
+  .description {
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.5;              /* Improve readability */
+    color: #d0d0d0;                /* Slightly muted white for body text */
+  }
+  
+  /* Button container */
+  .linky {
+    margin-top: 16px;
+  }
+  
+  /* Adoption button */
+  .shelter-button {
+    padding: 12px 24px;            /* Comfortable button size */  /* Button color matching design */
+    color: #ffffff;                /* Button text color */
+    border: none;                  /* Remove default button styles */
+    border-radius: 4px;            /* Rounded button */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .shelter-button:hover {
+    background-color: #7d3a78;     /* Darker shade on hover */
+  }
+  
