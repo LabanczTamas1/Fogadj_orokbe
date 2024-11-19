@@ -18,13 +18,10 @@ require_once '../views/components/petCard.php';
 ?>
 
 <main class="container">
-<!-- Üdvözlő üzenet -->
-<h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
 
 <div class="account-container" style="background-color: black;margin-bottom: 10px; color:white;  width: 200px; border-radius: 100px;">
-<a class="navbar-brand" href="/../pets/create.php" style="display:flex; justify-content: space-evenly; text-decoration: none; color: white;"></a>
 </div>
-<h3 class="section-title">Feltöltések:</h3>
+<h3 class="h3s">Menhelyek:</h3>
 <?php
 if($userShelters){
     foreach ($userShelters as $shelter) {
@@ -45,7 +42,7 @@ if($userShelters){
 ?>
 
 <hr>
-<h3 class="section-title">Kisállatok:</h3>
+<h3 class="h3s">Kisállatok:</h3>
 <?php
 if($userPets){
     foreach ($userPets as $pet) {

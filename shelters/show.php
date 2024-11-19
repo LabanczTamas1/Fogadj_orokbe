@@ -10,8 +10,7 @@ require_once '../views/components/petCard.php';
 
 ?>
 
-<div>
-    <img src="<?= '../files/shelter_image/'.$shelter->img?>">
+<div id="upload-name">
     <?=$shelter->shelter_name?>
     <?=$shelter->city?>
 </div>
@@ -35,7 +34,7 @@ require_once '../views/components/petCard.php';
             ]);
         }
     }else{
-        echo 'Nincsen megjelníthető menhely!';
+        echo '<div style="color: white;">Nincsen megjelníthető kisállat!</div>';
     }
 ?>
 </div>

@@ -1,6 +1,6 @@
 .shelter-card {
-    width: 30% !important;
-    height: 465px;
+    width: 40% !important;
+    height: 500px;
     background-color: #305C60 !important;
     overflow: hidden;
     padding: 0 !important;
@@ -16,13 +16,13 @@
 
 .shelter-card img {
     width: 100%;
-    height: 270px;
+    height: 300px;
     object-fit: cover;
 }
 
 .shelter-information {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     padding: 10px;
 }
@@ -54,7 +54,14 @@
     height: 46px;
     background-color: #B0846D;
     color: white;
-    margin-top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid white;
+}
+
+.shelter-button:hover {
+    background-color: #7d3a78;
+    cursor: pointer;
 }
 
 #card-buttons:hover{

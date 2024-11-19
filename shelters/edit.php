@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
 
 
 <div class="form-container">
-<h6 id="upload-name">Menhely Módosítása</h6>
+<h6 id="upload-name">Menhely módosítása</h6>
 
 <form class="upload-form" method="POST" enctype="multipart/form-data" >
     <?php if (!empty($errors)) : ?>
@@ -45,6 +45,6 @@ if(isset($_POST['submit'])){
 
     <textarea name="description" class="form-input-description" value="<?=$shelter->description?>" required><?=$shelter->description?></textarea>
 
-    <input type="submit" name="submit" class="upload-button" value="Feltöltés">
+    <input type="submit" name="submit" class="upload-button" value="Módosít">
 </form>
 </div>

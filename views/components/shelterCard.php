@@ -17,8 +17,8 @@ function shelter_card(array $array)
         </div>
         <?php if (($array['auth'] || $array['type'] == 'Developer') ): ?>
             <div id="card-buttons" style="display: flex; justify-content: space-between; width: 100%;">
-                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/edit')" style="background-color: #B0846D; margin-left: 5px;">módosítás ↻</button>
-                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/delete')" style="background-color: #B0846D; margin-right: 5px;">🗑</button>
+                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/edit')" class="shelter-button">módosítás ↻</button>
+                <button onclick="document.navigateTo('/shelters/<?= $array['slug']?>/delete')" class="shelter-button">🗑</button>
             </div>
         <?php endif ?>
     </div>

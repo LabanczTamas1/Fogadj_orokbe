@@ -34,6 +34,12 @@
     display: inline-block;
     box-sizing: border-box;
     margin-top: 50px;
+    border: 1px solid white;
+}
+
+.profile-delete-button:hover {
+    background-color: #7d3a78;
+    cursor: pointer;
 }
 
 .upload-buttons {
@@ -43,6 +49,12 @@
     text-align: center;
     width: 250px;
     box-sizing: border-box;
+    border: 1px solid white;
+}
+
+.upload-buttons:hover {
+    background-color: #7d3a78;
+    cursor: pointer;
 }
 
 .container-profile{

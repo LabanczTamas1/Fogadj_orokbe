@@ -73,14 +73,18 @@ main{
     margin-bottom: 20px;
 }
 
-.btn {
+.btni {
     background-color: #BF836D;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+    border: 1px rgb(217, 217, 217) solid;
+}
+
+.btni:hover {
+  background-color: #7d3a78;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 
 /* Section below the hero */

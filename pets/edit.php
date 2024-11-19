@@ -16,10 +16,8 @@ if(isset($_POST['submit'])){
     header("Location:/");
 }
 ?>
-
-<!-- Add back the form structure here -->
-<h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
-<h6>Feltöltés</h6>
+<div class="form-container">
+<h6 id="upload-name">Kisállat módosítás</h6>
 
 <form class="upload-form" method="POST" enctype="multipart/form-data">
     <?php if (!empty($errors)) : ?>
@@ -56,7 +54,8 @@ if(isset($_POST['submit'])){
                 <option <?php if($pet->shelter_id == $shelter->id) echo 'selected'?> value="<?=$shelter->id?>" ><?=$shelter->shelter_name?></option>
             <?php endforeach;?>
     </select>
-    <textarea name="description" class="form-input" value="<?=$pet->description;?>" required><?=$pet->description;?></textarea>
-    <input type="submit" name="submit" class="upload-button" value="Feltöltés">
+    <textarea name="description" class="form-input-description" value="<?=$pet->description;?>" required><?=$pet->description;?></textarea>
+    <input type="submit" name="submit" class="upload-button" value="Módosítás">
 </form>
+</div>
 <script src="../files/js/image-preview.js"></script>
