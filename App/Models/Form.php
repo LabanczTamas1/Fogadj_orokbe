@@ -17,4 +17,10 @@ class Form extends Model
         'user_id' => 'int',
         'slug' => 'string'
     ];
+    public function ownsByTheUser(int $user_id): bool
+    {
+        
+
+        return $this->user_id == $user_id;
+    }
 }

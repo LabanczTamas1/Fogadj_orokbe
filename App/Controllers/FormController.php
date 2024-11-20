@@ -10,6 +10,7 @@ class FormController{
         $arr['pet_id'] = intval($data['pet_id']);
         $arr['shelter_id'] = intval($data['shelter_id']);
         $arr['user_id'] = intval($data['user_id']);
+        $arr['slug'] = Tools::slugify('fullname');
 
         $form = new Form($arr);
         try {

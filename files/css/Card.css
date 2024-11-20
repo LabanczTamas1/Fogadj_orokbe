@@ -17,3 +17,94 @@
     font-size: 0.875rem;
     color: #6c757d;
   }
+/* Kártya alapstílus */
+.message-card {
+  background-color: #305C60 ; /* Világosabb háttér */
+  border: 1px solid #ddd; /* Finom keret */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 800px; /* Szélesebb keret */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width:100%!important;
+  color: #E1E8EA!important;
+
+}
+
+/* Árnyék hatás */
+.custom-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lágy árnyék */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tartalom elrendezése */
+.message-body {
+  display: flex;
+  justify-content: space-between; /* Elválasztja a bal oldali szöveget és a jobb oldali ikonokat */
+  align-items: flex-start; /* Ikonok és szöveg teteje legyen igazítva */
+  gap: 20px; /* Távolság a szöveg és ikonok között */
+}
+
+/* Bal oldali név és email */
+.message-info {
+  flex: 1; /* A bal oldali szöveg rugalmasan kitölti a helyet */
+  text-align: left;
+}
+
+.message-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E1E8EA!important;
+  margin: 0;
+}
+
+.message-email {
+  font-size: 0.9rem;
+  color: #E1E8EA!important;
+  margin: 0;
+  margin-top: 4px;
+}
+
+/* Jobb oldali ikonok (gombok) */
+.message-actions {
+  display: flex;
+  flex-direction: column; /* Ikonok egymás alatt */
+  gap: 10px; /* Távolság az ikonok között */
+  text-align: right;
+  min-width: 50px; /* Fix szélesség az ikonok oszlopának */
+}
+
+.message-btn {
+  text-decoration: none;
+  font-size: 1.5rem; /* Nagyobb ikonméret */
+  color: #E1E8EA!important;
+  display: inline-block;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.message-btn:hover {
+  transform: scale(1.1); /* Kicsit nagyít a hover hatásra */
+}
+
+.message-edit {
+  color: #007bff; /* Kék alapértelmezett szín */
+}
+
+.message-delete {
+  color: #dc3545; /* Piros alapértelmezett szín */
+}
+
+/* Szöveg középen alul */
+.message-text {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}

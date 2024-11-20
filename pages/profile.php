@@ -20,10 +20,15 @@ if(isset($_POST['userupdate'])){
 
 <div class="petsandshelter">
     <?php if(Helper::user()->type=='Shelter') {?>
-    <a href="/../pets/create.php" class="shelter-upload-link">+ Kisállat hozzáadása</a>
-    <a href="/../shelters/create.php" class="shelter-upload-link">+ Menhely hozzáadása</a>
-    <?php }?>
+    <a href="/../pets/create" class="shelter-upload-link">+ Kisállat hozzáadása</a>
+    <a href="/../shelters/create" class="shelter-upload-link">+ Menhely hozzáadása</a>
     <a href="/../user/uploads" class="shelter-upload-link">Feltöltött</a>
+
+    <?php }?>
+    <?php if(Helper::user()->type === "User") {?>
+        <a href="/../user/messages" class="shelter-upload-link">Üzeneteim</a>
+     <?php }?>
+
 </div>
 
 <div class="container-profile">
