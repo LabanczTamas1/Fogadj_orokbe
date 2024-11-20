@@ -10,7 +10,7 @@ describe('User Login and Upload Flow', () => {
         cy.get('#email_value').type('a@a'); // Replace with a valid test email
 
         // Fill in the password
-        cy.get('#passwd_value').type('a'); // Replace with a valid test password
+        cy.get('#passwd_value').type('aladartest'); // Replace with a valid test password
 
         // Submit the form
         cy.get('button[name="userlogin"]').click({ force: true });
