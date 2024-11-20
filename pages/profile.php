@@ -41,5 +41,5 @@ if(isset($_POST['userupdate'])){
     
 </div>
 
-    <button type="submit" name="passwordupdate" class="profile-delete-button">Fiókom törlése</button>
+    <button type="submit" name="accountdelete" class="profile-delete-button">Fiókom törlése</button>
 </div>
