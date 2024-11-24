@@ -102,4 +102,14 @@ class PetControllerTest extends TestCase
         $this->assertTrue($result);
     }
 
+    public function testImageUpload()
+    {
+        $img = $_FILES['image'] = ['tmp_name' => '/files/img/image.jpg', 'name' => 'image.jpg'];
+
+        $controller = new PetController();
+        $result = $controller->insertPet(['postname' => 'Kutya', 'image' => $img]);
+
+        $this->assertTrue($result);
+    }
+
 }
