@@ -28,4 +28,27 @@ class LoginControllerTest extends TestCase
         $this->loginController = new LoginController();
     }
 
+    public function testSuccessfulLogin()
+    {
+        $post = [
+            'email' => 'john@example.com',
+            'passwd' => 'correctpassword'
+        ];
+
+        $concrateUser = (object)[
+            'id' => 1,
+            'fullname' => 'John Doe',
+            'password' => password_hash('correctpassword', PASSWORD_DEFAULT),
+            'type' => 'User'
+        ];
+$this->sessionMock->expects($this->once())
+            ->method('create')
+            ->with($concrateUser->id)
+            ->willReturn(true);
+
+        // Teszteljük a Get_user metódust
+        $this->expectOutputRegex('/chooseOption/'); // Ellenőrizzük az átirányítást
+        $this->loginController->Get_user($post);
+    }
+
 }
