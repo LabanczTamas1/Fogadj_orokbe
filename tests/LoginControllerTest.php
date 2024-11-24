@@ -76,4 +76,28 @@ $this->sessionMock->expects($this->once())
         $this->loginController->Get_user($post);
     }
     
+    public function testNonExistentUser()
+    {
+        $post = [
+            'email' => 'nonexistent@example.com',
+            'passwd' => 'password'
+        ];
+
+        // Mockoljuk a User osztály metódusát
+        $this->userMock->expects($this->once())
+            ->method('getItemBy')
+            ->with('email', $post['email'])
+            ->willReturn(null);
+
+        // Teszteljük a Get_user metódust
+        $this->expectOutputRegex('/Nincsen ilyen felhasználó!/');
+        $this->loginController->Get_user($post);
+    }
+        // Mockoljuk a User osztály metódusát
+        $this->userMock->expects($this->once())
+            ->method('getItemBy')
+            ->with('email', $post['email'])
+            ->willReturn($concrateUser);
+
+        // Mockoljuk a session create metódusát
 }
