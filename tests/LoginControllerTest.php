@@ -51,4 +51,29 @@ $this->sessionMock->expects($this->once())
         $this->loginController->Get_user($post);
     }
 
+    public function testIncorrectPassword()
+    {
+        $post = [
+            'email' => 'john@example.com',
+            'passwd' => 'wrongpassword'
+        ];
+
+        $concrateUser = (object)[
+            'id' => 1,
+            'fullname' => 'John Doe',
+            'password' => password_hash('correctpassword', PASSWORD_DEFAULT),
+            'type' => 'User'
+        ];
+
+        // Mockoljuk a User osztály metódusát
+        $this->userMock->expects($this->once())
+            ->method('getItemBy')
+            ->with('email', $post['email'])
+            ->willReturn($concrateUser);
+
+        // Teszteljük a Get_user metódust
+        $this->expectOutputRegex('/Nem megfelelő a jelszó!/');
+        $this->loginController->Get_user($post);
+    }
+    
 }
