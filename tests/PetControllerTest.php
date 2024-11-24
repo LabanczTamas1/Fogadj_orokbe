@@ -75,4 +75,22 @@ class PetControllerTest extends TestCase
         $this->assertFalse($result);
     }
 
+    public function testInsertPetDataProcessing()
+    {
+        $arr = [
+            'postname' => 'Kutya',
+            'pet_name' => 'Buci',
+            'pet_gender' => 'M',
+            'pet_breed' => 'Pumi',
+            'pet_age' => '3',
+            'description' => 'Jó kutya',
+            'shelter_id' => 1,
+        ];
+
+        $controller = new PetController();
+        $result = $controller->insertPet($arr);
+
+        $this->assertTrue($result);
+    }
+
 }
