@@ -24,7 +24,8 @@ $forms = $formModel->getItemsBy('user_id',Helper::user()->id);
                     'message' => substr($form->message,0,39).'....',
                     'slug' => $form->slug,
                     'auth' => $ownsByTheUserBool,
-                    'type' => $type
+                    'type' => $type,
+                    'id' => $form->id
                 ]);
             }
         }else{

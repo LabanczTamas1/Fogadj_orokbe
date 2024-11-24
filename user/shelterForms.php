@@ -27,10 +27,11 @@ if($shelter) {
                 message_card([
                     'fullname' => $form->fullname,
                     'email' => $form->email,
-                    'message' => substr($form->message,0,39).'....',
+                    'message' => $form->message,
                     'slug' => $form->slug,
                     'auth' => $ownsByTheUserBool,
-                    'type' => $type
+                    'type' => $type,
+                    'id' => $form->id
                 ]);
             }
         }else{

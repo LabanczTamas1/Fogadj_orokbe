@@ -18,10 +18,23 @@ function message_card(array $array)
                 </a>
             </div>
             <?php endif ?>
+            <a href="#" data-toggle="modal" data-target="#messag<?= $array['id']?>">Több..</a>
         </div>
         <!-- Szöveg középen alul -->
         <div class="message-text">
             <p><?= nl2br($array['message']) ?></p>
+        </div>
+    </div>
+    <div class="modal" id = "messag<?= $array['id']?>">
+        <div class="model-dialog modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><?=$array['fullname'] ?></h2>
+                </div>
+                <div class="modal-body">
+                    <?= nl2br($array['message']) ?>
+                </div>
+            </div>
         </div>
     </div>
 <?php
