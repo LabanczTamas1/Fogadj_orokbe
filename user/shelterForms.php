@@ -30,7 +30,7 @@ $forms = $formModel->getItemsBy('shelter_id',$shelter->id);
                 ]);
             }
         }else{
-            echo "Nincsenek elküldött üzenetei.";
+            echo '<div style="color: white;">Nincsenek elküldött üzenetei!</div>';
         }
     ?>
 </div>

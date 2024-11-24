@@ -46,7 +46,7 @@ if($shelter_filter ){
             ]);
         }
     }else{
-        echo 'Nincsen megjelníthető menhely!';
+        echo '<div style="color: white;">Nincsen megjelníthető kisállat!</div>';
     }
 ?>
 </div>

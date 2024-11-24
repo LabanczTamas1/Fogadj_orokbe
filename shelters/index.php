@@ -26,7 +26,7 @@ $shelters = $shelterModel->all();
             ]);
         }
     }else{
-        echo 'Nincsen megjelníthető menhely!';
+        echo '<div style="color: white;">Nincsen megjelníthető menhely!</div>';
     }
 ?>
 </div>

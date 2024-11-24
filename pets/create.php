@@ -2,6 +2,7 @@
 use App\Helper;
 require_once __DIR__ . '/../lib/autoload.php';
 new App\Template('upload_pet','empty');
+
 use App\Controllers\PetController;
 if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
     header('Location: /');

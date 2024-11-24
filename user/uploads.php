@@ -37,7 +37,7 @@ if($userShelters){
         ]);
     }
 }else{
-    echo 'Nincsen megjelníthető menhely!';
+    echo '<div style="color: white;">Nincsen megjelníthető menhely!</div>';
 }
 ?>
 
@@ -61,7 +61,7 @@ if($userPets){
         ]);
     }
 }else{
-    echo 'Nincsen megjelníthető menhely!';
+    echo '<div style="color: white;">Nincsen megjelníthető kisállat!</div>';
 }
 ?>
 </main>

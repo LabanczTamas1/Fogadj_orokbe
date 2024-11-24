@@ -71,7 +71,7 @@
 
 .petsandshelter {
     display: flex;
-    justify-content:space-around;
     padding-bottom: 10px;
-    margin: 0;
+    width: 1300px;
+    justify-content: space-around;
 }

@@ -23,8 +23,6 @@ class Pet extends Model
     ];
     public function ownsByTheUser(int $user_id): bool
     {
-        
-
         return $this->user_id == $user_id;
     }
 }
