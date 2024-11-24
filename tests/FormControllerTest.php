@@ -54,4 +54,29 @@ class FormControllerTest extends TestCase
         $this->assertNull($result); // A metódus nem ad vissza semmit, ha sikeres
     }
 
+    public function testFormSendFailure()
+    {
+        // Adatok előkészítése
+        $data = [
+            'fullname' => 'John Doe',
+            'email' => 'john@example.com',
+            'message' => 'Hello World!',
+            'pet_id' => '1',
+            'shelter_id' => '2',
+            'user_id' => '3',
+            'postname' => 'Form submission'
+        ];
+
+        // Mockoljuk a Form mentésének sikertelenségét
+        $this->formMock->expects($this->once())
+            ->method('save')
+            ->willThrowException(new \Exception('Database error'));
+
+        // Teszteljük a formSend metódust
+        $result = $this->formController->formSend($data);
+
+        // Ellenőrizzük a várható viselkedést
+        $this->assertFalse($result); // Sikertelenség esetén a metódus false-t ad vissza
+    }
+    
 }
