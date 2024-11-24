@@ -1,4 +1,6 @@
 <?php
+namespace Tests;
+
 use PHPUnit\Framework\TestCase;
 use App\Controllers\LoginController;
 use App\Models\User;

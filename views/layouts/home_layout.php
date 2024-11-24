@@ -34,35 +34,35 @@ footer{
   <div class="extra-section">
   
 
-  <div class="cool-cards">
-        <div class="card">
-            <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Cute Animal 1">
-            <div class="card-content">
-                <h3>Join Us</h3>
-                <p>Help us bring a change by joining our community of animal lovers.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Cute Animal 2">
-            <div class="card-content">
-                <h3>Donate Now</h3>
-                <p>Your donations go directly to the care of our furry friends.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Cute Animal 3">
-            <div class="card-content">
-                <h3>Adopt</h3>
-                <p>Give a forever home to a pet in need of love and care.</p>
-            </div>
+<div class="cool-cards">
+    <div class="card">
+        <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Cute Animal 1">
+        <div class="card-content">
+            <h3>Join Us</h3>
+            <p>Help us bring a change by joining our community of animal lovers.</p>
         </div>
     </div>
+    <div class="card">
+        <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Cute Animal 2">
+        <div class="card-content">
+            <h3>Donate Now</h3>
+            <p>Your donations go directly to the care of our furry friends.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/files/img/SPEEDY2-768x1253.jpg" alt="Cute Animal 3">
+        <div class="card-content">
+            <h3>Adopt</h3>
+            <p>Give a forever home to a pet in need of love and care.</p>
+        </div>
+    </div>
+</div>
 
 </div>
-  
+
 </div>
 
-  </div>
+</div>
 
   <?php $this->include('components/footer') ?>
 

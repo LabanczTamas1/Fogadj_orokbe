@@ -78,5 +78,4 @@ class FormControllerTest extends TestCase
         // Ellenőrizzük a várható viselkedést
         $this->assertFalse($result); // Sikertelenség esetén a metódus false-t ad vissza
     }
-    
 }
