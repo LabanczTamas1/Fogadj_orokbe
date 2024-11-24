@@ -8,7 +8,7 @@ function message_card(array $array)
                 <p class="message-name"><?=$array['fullname'] ?></p>
                 <p class="message-email"><?= $array['email']?></p>
             </div>
-            
+            <?php if (($array['auth'] || $array['type'] == 'Developer') ): ?>  
             <div class="message-actions">
                 <a href="/message/<?= $array['slug'] ?>/edit" class="message-btn message-edit" title="Módosítás">
                     ✏️
@@ -17,6 +17,7 @@ function message_card(array $array)
                     🗑️
                 </a>
             </div>
+            <?php endif ?>
         </div>
         <!-- Szöveg középen alul -->
         <div class="message-text">

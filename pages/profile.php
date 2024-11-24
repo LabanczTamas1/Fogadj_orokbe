@@ -23,6 +23,7 @@ if(isset($_POST['userupdate'])){
     <a href="/../pets/create" class="shelter-upload-link">+ Kisállat hozzáadása</a>
     <a href="/../shelters/create" class="shelter-upload-link">+ Menhely hozzáadása</a>
     <a href="/../user/uploads" class="shelter-upload-link">Feltöltött</a>
+    <a href="/../user/shelterForms" class="shelter-upload-link">Beérkező üzenetek</a>
 
     <?php }?>
     <?php if(Helper::user()->type === "User") {?>
