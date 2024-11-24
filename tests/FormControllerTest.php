@@ -29,4 +29,29 @@ class FormControllerTest extends TestCase
         $this->formController = new FormController();
     }
 
+    public function testFormSendSuccess()
+    {
+        // Adatok előkészítése
+        $data = [
+            'fullname' => 'John Doe',
+            'email' => 'john@example.com',
+            'message' => 'Hello World!',
+            'pet_id' => '1',
+            'shelter_id' => '2',
+            'user_id' => '3',
+            'postname' => 'Form submission'
+        ];
+
+        // Mockoljuk a Form mentésének sikerességét
+        $this->formMock->expects($this->once())
+            ->method('save')
+            ->willReturn(true);
+
+        // Teszteljük a formSend metódust
+        $result = $this->formController->formSend($data);
+
+        // Ellenőrizzük a várható viselkedést
+        $this->assertNull($result); // A metódus nem ad vissza semmit, ha sikeres
+    }
+
 }
