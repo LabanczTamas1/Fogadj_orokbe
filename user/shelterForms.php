@@ -9,8 +9,12 @@ if(!Helper::isAuth() && App\Helper::user()->type != 'Shelter'){
 require_once '../views/components/messageCard.php';
 $shelterModel = new App\Models\Shelter;
 $shelter = $shelterModel->getItemBy('user_id',Helper::user()->id);
-$formModel = new App\Models\Form;
-$forms = $formModel->getItemsBy('shelter_id',$shelter->id);
+if($shelter) {
+    $formModel = new App\Models\Form;
+    $forms = $formModel->getItemsBy('shelter_id',$shelter->id);
+}else {
+    $forms = "";
+}
 ?>
 <h1 style="color:#E1E8EA!important;">Beérkezett üzenetek: <?=Helper::user()->username;?> </h1>
 

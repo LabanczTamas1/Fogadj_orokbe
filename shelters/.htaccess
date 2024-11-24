@@ -1,11 +1,19 @@
 Options +FollowSymLinks -MultiViews
 
 RewriteEngine On
-RewriteRule ^([^/\.]+)/?$ show.php?slug=$1
+
+# Ha nincs fájlkiterjesztés, akkor próbálja megtalálni a megfelelő PHP fájlt
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/\.]+)/?$ $1.php [L]
+
+# Slug alapján irányít át a show.php-ra
+RewriteRule ^([^/\.]+)/?$ show.php?slug=$1 [L]
 RewriteRule ^([^/\.]+)/edit edit.php?slug=$1
 RewriteRule ^([^/\.]+)/delete delete.php?slug=$1
 
 
+# Index.php kivételkezelés
 RewriteCond %{REQUEST_URI} !^/shelters/index.php$
 RewriteCond %{REQUEST_FILENAME}.php -f [NC]
 RewriteRule ^ %{REQUEST_URI}.php [L]

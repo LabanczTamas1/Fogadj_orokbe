@@ -11,8 +11,6 @@ if (isset($_POST["submit"])) {
     $upload = new ShelterController();
     $upload->shelterUpload($_POST);
 }
-$sheltersModel= new App\Models\Shelter;
-$shelters = $sheltersModel->getItemsBy('user_id',App\Helper::user()->id);
 ?>
 
 
