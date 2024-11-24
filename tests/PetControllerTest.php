@@ -36,4 +36,25 @@ class PetControllerTest extends TestCase
         $this->assertTrue($result);
     }
     
+    public function testUpdatePetSuccess()
+    {
+        $pet = new Pet(); // Hozzon létre egy tesztpetet az adatbázisban
+        $arr = [
+            'id' => $pet->id,
+            'postname' => 'Macska',
+            'pet_name' => 'Mici',
+            'pet_gender' => 'N',
+            'pet_breed' => 'Bengál',
+            'pet_status' => 'Y4:0',
+            'pet_age' => '2',
+            'description' => 'Szőrös macska',
+            'shelter_id' => 1,
+        ];
+
+        $controller = new PetController();
+        $result = $controller->updatePet($arr);
+
+        $this->assertTrue($result);
+    }
+
 }
