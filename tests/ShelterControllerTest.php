@@ -127,4 +127,22 @@ class ControllerShelterTest extends TestCase {
         $this->assertEquals('Adjon meg egy várost!', $this->controller->errors['city'][0]);
         $this->assertEquals('Írja le a menház leírását!', $this->controller->errors['description'][0]);
     }
+
+    public function testShelterUploadInvalidImage() {
+        $post = [
+            'shelter_name' => 'Test Shelter',
+            'city' => 'Test City',
+            'description' => 'Test Description'
+        ];
+
+        $this->helperMock->shouldReceive('user')->once()->andReturn(Mockery::mock(['id' => 1]));
+        $this->toolsMock->shouldReceive('slugify')->once()->with('Test Shelter')->andReturn('test-shelter-slug');
+        $this->imageMock->shouldReceive('ImageUpload')->once()->with($_FILES, '/files/shelter_image/')->andReturn(['error' => 'Invalid file type']);
+        
+        $result = $this->controller->shelterUpload($post);
+
+        $this->assertFalse($result);
+        $this->assertArrayHasKey('errors', $this->controller->errors);
+        $this->assertEquals('Érvénytelen fájl típus!', $this->controller->errors['img'][0]);
+    }
 }
