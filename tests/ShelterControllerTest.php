@@ -98,4 +98,16 @@ class ControllerShelterTest extends TestCase {
         $this->assertTrue($result);
         $this->assertEquals('new-image.jpg', $this->shelterModel->getImg());
     }
+
+    public function testShelterUploadEmptyFields() {
+        $post = [];
+        
+        $result = $this->controller->shelterUpload($post);
+
+        $this->assertFalse($result);
+        $this->assertArrayHasKey('errors', $this->controller->errors);
+        $this->assertEquals('Adjon meg egy menháznevet!', $this->controller->errors['shelter_name'][0]);
+        $this->assertEquals('Adjon meg egy várost!', $this->controller->errors['city'][0]);
+        $this->assertEquals('Írja le a menház leírását!', $this->controller->errors['description'][0]);
+    }
 }
