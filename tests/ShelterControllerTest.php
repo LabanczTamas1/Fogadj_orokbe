@@ -164,4 +164,20 @@ class ControllerShelterTest extends TestCase {
         $this->assertArrayHasKey('errors', $this->controller->errors);
         $this->assertEquals('Érvénytelen fájl típus!', $this->controller->errors['img'][0]);
     }
+
+    public function testShelterUploadSlugGeneration() {
+        $post = [
+            'shelter_name' => 'Test Shelter',
+            'city' => 'Test City',
+            'description' => 'Test Description'
+        ];
+
+        $this->helperMock->shouldReceive('user')->once()->andReturn(Mockery::mock(['id' => 1]));
+        $this->toolsMock->shouldReceive('slugify')->once()->with('Test Shelter')->andReturn('test-shelter-slug');
+        
+        $result = $this->controller->shelterUpload($post);
+
+        $this->assertTrue($result);
+        $this->assertEquals('test-shelter-slug', $this->shelterModel->getShelterSlug());
+    }
 }
