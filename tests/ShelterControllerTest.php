@@ -46,4 +46,21 @@ class ControllerShelterTest extends TestCase {
         $this->assertEquals(1, $this->helperMock->user()->id);
         $this->assertEquals('test-shelter-slug', $this->shelterModel->getShelterSlug());
     }
+
+    public function testShelterUploadWithImage() {
+        $post = [
+            'shelter_name' => 'Test Shelter',
+            'city' => 'Test City',
+            'description' => 'Test Description'
+        ];
+
+        $this->helperMock->shouldReceive('user')->once()->andReturn(Mockery::mock(['id' => 1]));
+        $this->toolsMock->shouldReceive('slugify')->once()->with('Test Shelter')->andReturn('test-shelter-slug');
+        $this->imageMock->shouldReceive('ImageUpload')->once()->with($_FILES, '/files/shelter_image/')->andReturn('new-image.jpg');
+        
+        $result = $this->controller->shelterUpload($post);
+
+        $this->assertTrue($result);
+        $this->assertEquals('new-image.jpg', $this->shelterModel->getImg());
+    }
 }
