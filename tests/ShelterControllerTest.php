@@ -145,4 +145,23 @@ class ControllerShelterTest extends TestCase {
         $this->assertArrayHasKey('errors', $this->controller->errors);
         $this->assertEquals('Érvénytelen fájl típus!', $this->controller->errors['img'][0]);
     }
+
+    public function testShelterUpdateInvalidImage() {
+        $arr = [
+            'id' => 1,
+            'shelter_name' => 'Updated Shelter',
+            'city' => 'Updated City',
+            'description' => 'Updated Description'
+        ];
+
+        $this->helperMock->shouldReceive('user')->once()->andReturn(Mockery::mock(['id' => 1]));
+        $this->toolsMock->shouldReceive('slugify')->once()->with('Updated Shelter')->andReturn('updated-shelter-slug');
+        $this->imageMock->shouldReceive('UpdateImage')->once()->with($this->shelterModel->getImg(), $_FILES, '/files/shelter_image/')->andReturn(['error' => 'Invalid file type']);
+        
+        $result = $this->controller->shelterUpdate($arr);
+
+        $this->assertFalse($result);
+        $this->assertArrayHasKey('errors', $this->controller->errors);
+        $this->assertEquals('Érvénytelen fájl típus!', $this->controller->errors['img'][0]);
+    }
 }
