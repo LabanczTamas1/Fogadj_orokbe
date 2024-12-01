@@ -1,118 +1,176 @@
 <?php
-namespace Tests;
 
+use App\Controllers\SessionController;
 use PHPUnit\Framework\TestCase;
 use App\Controllers\RegisterController;
 use App\Models\User;
-use App\Tools;
-use App\Controllers\SessionController;
+
 class RegisterControllerTest extends TestCase
 {
-    private $userMock;
-    private $controller;
+    protected $registerController;
+    protected $userMock;
 
     protected function setUp(): void
     {
+        parent::setUp();
+
+        // Reset the session
+        $_SESSION = [];
+    
+        // Mock the `User` model
         $this->userMock = $this->createMock(User::class);
-        $this->controller = new RegisterController($this->userMock);
+    
+        // Replace the RegisterController and mock the `redirect` method
+        $this->registerController = $this->getMockBuilder(RegisterController::class)
+            ->setConstructorArgs([$this->userMock])
+            ->onlyMethods(['redirect'])
+            ->getMock();
     }
+    
 
-    public function testInsertUserFailsWhenUsernameOrEmailIsEmpty()
+public function testInsertUserSuccess()
+{
+$postData = [
+    'email' => 'test@example.com',
+    'username' => 'testuser',
+    'passwd1' => 'password123',
+    'passwd2' => 'password123',
+    'type' => 'User'
+];
+
+// Mock `getItemBy` to return false for both username and email
+$this->userMock->expects($this->exactly(2))
+    ->method('getItemBy')
+    ->willReturn(false); // Simulate no existing user with the provided username or email
+
+// Mock `save` method to return true (user is saved successfully)
+$this->userMock->expects($this->once())
+    ->method('save')
+    ->willReturn(true);
+
+// Mock the redirect method to avoid actual header calls during tests
+$this->registerController = $this->getMockBuilder(RegisterController::class)
+    ->setConstructorArgs([$this->userMock])
+    ->onlyMethods(['redirect'])  // Only mock the `redirect` method
+    ->getMock();
+
+// Expect redirect to be called with the home URL
+$this->registerController->expects($this->once())
+    ->method('redirect')
+    ->with('/userhandle/login');
+
+// Call `InsertUser` method and capture the result
+$result = $this->registerController->InsertUser($postData);
+
+// Assert that `InsertUser` returns true (indicating success)
+$this->assertTrue($result);
+
+}
+
+
+    public function testInsertUserFailsWhenFieldsAreEmpty()
     {
-        Tools::FlashMessage('FlashMessage')->willReturn(null); // Mock Tools::FlashMessage
-
+        // Define post data with empty fields
         $postData = [
             'username' => '',
             'email' => '',
             'passwd1' => 'password123',
             'passwd2' => 'password123',
-            'type' => 'User',
+            'type' => 'User'
         ];
 
-        $result = $this->controller->InsertUser($postData);
+        // Call InsertUser method
+        $result = $this->registerController->InsertUser($postData);
 
+        // Assert that InsertUser returns false
         $this->assertFalse($result);
+
+        // Assert that the flash message is correctly set
+        $this->assertEquals(
+            'Please provide valid username and email.',
+            $_SESSION['flash_message']['message']
+        );
     }
 
     public function testInsertUserFailsWhenPasswordsDoNotMatch()
     {
-        Tools::FlashMessage('FlashMessage')->willReturn(null); // Mock Tools::FlashMessage
-
+        // Define post data with mismatched passwords
         $postData = [
             'username' => 'testuser',
             'email' => 'test@example.com',
             'passwd1' => 'password123',
-            'passwd2' => 'password456',
-            'type' => 'User',
+            'passwd2' => 'password124',
         ];
 
-        $result = $this->controller->InsertUser($postData);
+        // Call InsertUser method
+        $result = $this->registerController->InsertUser($postData);
 
+        // Assert that InsertUser returns false
         $this->assertFalse($result);
+
+        // Assert that the flash message is correctly set
+        $this->assertEquals(
+            'Passwords do not match.',
+            $_SESSION['flash_message']['message']
+        );
     }
 
     public function testInsertUserFailsWhenUsernameAlreadyExists()
     {
-        Tools::FlashMessage('FlashMessage')->willReturn(null); // Mock Tools::FlashMessage
-
-        $this->userMock->getItemBy('getItemBy')->with('username', 'testuser')->willReturn(true);
-
+        // Define post data where username already exists
         $postData = [
-            'username' => 'testuser',
-            'email' => 'test@example.com',
+            'username' => 'existinguser',
+            'email' => 'newemail@example.com',
             'passwd1' => 'password123',
             'passwd2' => 'password123',
-            'type' => 'User',
         ];
 
-        $result = $this->controller->InsertUser($postData);
+        // Mock `getItemBy` to return true for existing username
+        $this->userMock->expects($this->once())
+            ->method('getItemBy')
+            ->with('username', $postData['username'])
+            ->willReturn(true);
 
+        // Call InsertUser method
+        $result = $this->registerController->InsertUser($postData);
+
+        // Assert that InsertUser returns false
         $this->assertFalse($result);
+
+        // Assert that the flash message is correctly set
+        $this->assertEquals('Username already exists.', $_SESSION['flash_message']['message']);
     }
 
     public function testInsertUserFailsWhenEmailAlreadyExists()
     {
-        Tools::FlashMessage('FlashMessage')->willReturn(null); // Mock Tools::FlashMessage
-
-        $this->userMock->getItemBy('getItemBy')->willReturnCallback(function($field, $value) {
-            return $field === 'email' ? true : false;
-        });
-
         $postData = [
-            'username' => 'testuser',
-            'email' => 'test@example.com',
+            'username' => 'newuser',
+            'email' => 'existing@example.com',
             'passwd1' => 'password123',
             'passwd2' => 'password123',
-            'type' => 'User',
         ];
-
-        $result = $this->controller->InsertUser($postData);
-
+    
+        // Mock `getItemBy` to check both username and email in sequence
+        $this->userMock->expects($this->exactly(2))
+            ->method('getItemBy')
+            ->will($this->returnCallback(function ($field, $value) use ($postData) {
+                if ($field === 'username' && $value === $postData['username']) {
+                    return false; // Username does not exist
+                }
+                if ($field === 'email' && $value === $postData['email']) {
+                    return true; // Email already exists
+                }
+                return null;
+            }));
+    
+        // Call InsertUser method
+        $result = $this->registerController->InsertUser($postData);
+    
+        // Assert that InsertUser returns false due to email conflict
         $this->assertFalse($result);
+    
+        // Check that the correct flash message was set
+        $this->assertEquals('Email already exists.', $_SESSION['flash_message']['message']);
     }
 
-    public function testInsertUserSucceeds()
-    {
-        Tools::FlashMessage('FlashMessage')->willReturn(null); // Mock Tools::FlashMessage
-        Tools::Crypt('Crypt')->willReturn('encrypted_password'); // Mock Tools::Crypt
-
-        $this->userMock->method('getItemBy')->willReturn(false); // No duplicates
-        $this->userMock->method('save')->willReturn(true);
-
-        global $session;
-        $session = $this->createMock(SessionController::class);
-        $session->create('create')->willReturn(true);
-
-        $postData = [
-            'username' => 'testuser',
-            'email' => 'test@example.com',
-            'passwd1' => 'password123',
-            'passwd2' => 'password123',
-            'type' => 'User',
-        ];
-
-        $result = $this->controller->InsertUser($postData);
-
-        $this->assertTrue($result);
-    }
 }

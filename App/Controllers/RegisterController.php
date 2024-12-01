@@ -36,23 +36,21 @@ class RegisterController
         }
 
         $data['password'] = Tools::Crypt($post['passwd1']);
-        $user = new User($data);
-        if ($user->save()) {
+        $this->user= new User($data);
+        if ($this->user->save()) {
             Tools::FlashMessage("Successful registration!", 'success');
-            $get_user = $user->getItemBy('username',$user->username);
-            if($session->create($get_user->id)){
-                header("Location: /");
+                $this->redirect("/userhandle/login");
                 return true;
-           }else{
-
-                Tools::FlashMessage("Error occurred during login.", 'danger');
-               return false;
-            }
            
         } else {
             Tools::FlashMessage("Error occurred during registration.", 'danger');
             return false;
         }
+    }
+    protected function redirect($url)
+    {
+        header("Location: $url");
+        exit;
     }
 
 
