@@ -25,6 +25,7 @@ require_once '../views/components/petCard.php';
 <?php
 if($userShelters){
     foreach ($userShelters as $shelter) {
+        $petCount = $petModel->count("shelter_id",$shelter->id);
         $ownsByTheUserBool = $user ? $shelter->ownsByTheUser($user->id) : false;
         $type = $user ? $user->type :false;
         shelter_card([
@@ -33,7 +34,8 @@ if($userShelters){
             'img' => $shelter->img,
             'slug' => $shelter->shelter_slug,
             'auth' => $ownsByTheUserBool,
-            'type' => $type
+            'type' => $type,
+            'count' => $petCount
         ]);
     }
 }else{

@@ -7,6 +7,7 @@ require_once '../views/components/shelterCard.php';
 
 $shelterModel = new App\Models\Shelter();
 $shelters = $shelterModel->all(); 
+$petModel = new App\Models\Pet;
 
 ?>
 
@@ -14,6 +15,7 @@ $shelters = $shelterModel->all();
 <?php
     if($shelters){
         foreach ($shelters as $shelter) {
+            $petCount = $petModel->count("shelter_id",$shelter->id);
             $ownsByTheUserBool = $user ? $shelter->ownsByTheUser($user->id) : false;
             $type = $user ? $user->type :false; 
             shelter_card([
@@ -22,7 +24,8 @@ $shelters = $shelterModel->all();
                 'img' => $shelter->img,
                 'slug' => $shelter->shelter_slug,
                 'auth' => $ownsByTheUserBool,
-                'type' => $type
+                'type' => $type,
+                'count' => $petCount
             ]);
         }
     }else{

@@ -7,6 +7,7 @@ $pet= $petModel->getItemBy('slug',$_GET['slug']);
 
 $shelterModel = new App\Models\Shelter;
 $shelter = $shelterModel->getItemBy('id',$pet->shelter_id);
+$petCount = $petModel->count('shelter_id',$shelter->id);
 require_once '../views/components/shelterCard.php';
 
 ?>
@@ -34,7 +35,8 @@ require_once '../views/components/shelterCard.php';
                 'img' => $shelter->img,
                 'slug' => $shelter->shelter_slug,
                 'auth' => $ownsByTheUserBool,
-                'type' => $type
+                'type' => $type,
+                'count' => $petCount
             ]);
         
     }else{
