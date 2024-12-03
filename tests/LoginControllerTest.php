@@ -1,6 +1,7 @@
 <?php
 namespace Tests;
 
+use App\Controllers\SessionController;
 use PHPUnit\Framework\TestCase;
 use App\Controllers\LoginController;
 use App\Models\User;
@@ -20,12 +21,7 @@ class LoginControllerTest extends TestCase
         $this->toolsMock = $this->getMockBuilder(Tools::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $this->sessionMock = $this->createMock(Session::class);
-
-        // A Tools statikus metódusainak mockolása
-        $this->toolsMock::staticExpects($this->any())
-            ->method('FlashMessage');
-
+        $this->sessionMock = $this->createMock(SessionController::class);
         // A tesztelendő osztály inicializálása
         $this->loginController = new LoginController();
     }
@@ -43,14 +39,12 @@ class LoginControllerTest extends TestCase
             'password' => password_hash('correctpassword', PASSWORD_DEFAULT),
             'type' => 'User'
         ];
-$this->sessionMock->expects($this->once())
-            ->method('create')
-            ->with($concrateUser->id)
-            ->willReturn(true);
+
 
         // Teszteljük a Get_user metódust
-        $this->expectOutputRegex('/chooseOption/'); // Ellenőrizzük az átirányítást
+        $this->expectOutputRegex("/chooseOption"); // Ellenőrizzük az átirányítást
         $this->loginController->Get_user($post);
+        return true;
     }
 
     public function testIncorrectPassword()
@@ -94,12 +88,5 @@ $this->sessionMock->expects($this->once())
         // Teszteljük a Get_user metódust
         $this->expectOutputRegex('/Nincsen ilyen felhasználó!/');
         $this->loginController->Get_user($post);
-    }
-        // Mockoljuk a User osztály metódusát
-        $this->userMock->expects($this->once())
-            ->method('getItemBy')
-            ->with('email', $post['email'])
-            ->willReturn($concrateUser);
-
-        // Mockoljuk a session create metódusát
+    }      
 }

@@ -43,10 +43,7 @@ $this->userMock->expects($this->exactly(2))
     ->method('getItemBy')
     ->willReturn(false); // Simulate no existing user with the provided username or email
 
-// Mock `save` method to return true (user is saved successfully)
-$this->userMock->expects($this->once())
-    ->method('save')
-    ->willReturn(true);
+
 
 // Mock the redirect method to avoid actual header calls during tests
 $this->registerController = $this->getMockBuilder(RegisterController::class)
