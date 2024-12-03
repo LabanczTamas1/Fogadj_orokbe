@@ -16,6 +16,7 @@ if(isset($_POST['userupdate'])){
 
 }
 
+
 ?>
 
 <div class="petsandshelter">
@@ -47,5 +48,5 @@ if(isset($_POST['userupdate'])){
     
 </div>
 
-    <button type="submit" name="accountdelete" class="profile-delete-button">Fiókom törlése</button>
+    <button onclick="document.navigateTo('/user/<?= Helper::user()->email?>/delete')" name="accountdelete" class="profile-delete-button">Fiókom törlése</button>
 </div>
