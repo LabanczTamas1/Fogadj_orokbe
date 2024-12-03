@@ -18,12 +18,7 @@ class FormControllerTest extends TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        // A Tools osztály statikus metódusainak mockolása
-        $this->toolsMock::staticExpects($this->any())
-            ->method('slugify')
-            ->willReturn('mocked-slug');
-        $this->toolsMock::staticExpects($this->any())
-            ->method('FlashMessage');
+     
 
         // Inicializáljuk a tesztelendő osztályt
         $this->formController = new FormController();

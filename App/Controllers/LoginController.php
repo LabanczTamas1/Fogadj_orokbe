@@ -19,9 +19,9 @@ class LoginController {
                 if ($session->create($concrateUser -> id)) {
                     Tools::FlashMessage('Sikeres bejelentkezés! Üdv ' . $concrateUser -> fullname, 'success');
                     if($concrateUser->type === 'User'){
-                        header('Location: /pages/chooseOption');
+                        $this->redirect("/pages/chooseOption");
                     }else{
-                        header('Location: /');
+                        $this->redirect("/");
                     }
                 };
             } else {
@@ -33,5 +33,10 @@ class LoginController {
             Tools::FlashMessage($wrongusername, 'danger');
         }
      
+    }
+    protected function redirect($url)
+    {
+        header("Location: $url");
+        exit;
     }
 }

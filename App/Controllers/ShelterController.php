@@ -24,7 +24,8 @@ class ShelterController {
             if ($shelter->save()) {
                 Tools::FlashMessage($data['shelter_name'] . ' hozzáadva', 'success');
                 session_write_close(); 
-                header('Location: /');
+                $this->redirect("/");
+
                 exit;
             }
         } catch (\Exception $e) {
@@ -63,7 +64,14 @@ class ShelterController {
                 header("Location: /");
             }
         } catch (\Exception $e) {
-            die();
+            Tools::FlashMessage("Something went wrong ".$e,"danger");
+            header("Location: /");
         }
+    }
+    
+    protected function redirect($url)
+    {
+        header("Location: $url");
+        exit;
     }
 }

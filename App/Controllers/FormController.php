@@ -27,4 +27,26 @@ class FormController{
 
 
     }
+    public function updateMessage($post){
+        $formModel = new Form();
+        $form = $formModel->getItemById($post["id"]);
+        $form->set('message',$post["message"]);
+        try {
+            if ($form->update()) {
+                Tools::FlashMessage("Updated Message", 'success');
+                session_write_close(); 
+                $this->redirect("/user/messages");
+            }
+        } catch (\Exception $e) {
+            Tools::FlashMessage("Something Went Wrong", 'danger');
+            $this->redirect("/");
+        }
+
+
+    }
+    protected function redirect($url)
+    {
+        header("Location: $url");
+        exit;
+    }
 }

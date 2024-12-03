@@ -71,12 +71,17 @@ class PetController {
         try {
             if ($pet->update()) {
                 Tools::FlashMessage($pet->postname . ' módosítva', 'success');
-                header("Location: /");
+                $this->redirect("/");
             }
         } catch (\Exception $e) {
+            Tools::FlashMessage( ' Something went wrong', 'danger');
+            $this->redirect("/");
             die();
         }
-
-
+    }
+    protected function redirect($url)
+    {
+        header("Location: $url");
+        exit;
     }
 }
