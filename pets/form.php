@@ -20,22 +20,21 @@ if(isset($_POST['submit'])){
         color: white;
     }
 
-    .container-pet > *{
+    .container-pet{
         color: white;
     }
 </style>
 
-<div class="container-pet">
-<?= $pet->postname;?>
-<?= $pet->pet_name;?>
-<?= $pet->pet_gender;?>
-<?= $pet->pet_breed;?>
-<?= $pet->pet_age;?>
-<?= $pet->description;?>
-<?= $pet->postname;?>
-<img src="<?= '../files/pet_image/'.$pet->img;?>." alt="">
+<div class="container-pet" style="display: flex; flex-direction: row !important; width: 100%; height:20rem;">
+    <img src="<?= '../../files/pet_image/'.$pet->img; ?>" alt="Person holding a dog" onclick="document.navigateTo('/pets/<?= $pet->slug ?>')" style="width: auto; height:20rem;">
+    <div class="pet-information">
+                    <div class="pet-name"><?= $pet->pet_name; ?></div>
+                    <div class="pet-breed">Faj: <?= $pet->pet_breed; ?></div>
+                    <div class="pet-gender">Nem: <?= $pet->pet_gender; ?></div>
+                    <div class="pet-age">Kor: <?= $pet->pet_age; ?></div>
+                    <div class="description" style="color: white;">Leírás: <?= $pet->description; ?></div>
+    </div>
 </div>
-<hr>
 
 <form class="upload-form" method="POST" enctype="multipart/form-data" style="display: flex; align-items: center; justify-content: center; height: 50vh; width:100%;">
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
