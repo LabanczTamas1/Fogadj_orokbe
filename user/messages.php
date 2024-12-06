@@ -17,7 +17,7 @@ $forms = $formModel->getItemsBy('user_id',Helper::user()->id);
         if($forms) {
             foreach($forms as $form){
                 $ownsByTheUserBool = $user ? $form->ownsByTheUser($user->id) : false;
-                $type = $user ? $user->type :false; 
+                $type = $user ? $user->type :false;
                 message_card([
                     'fullname' => $form->fullname,
                     'email' => $form->email,
