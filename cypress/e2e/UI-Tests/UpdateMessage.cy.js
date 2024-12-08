@@ -126,10 +126,9 @@ describe('Check message', () => {
 
         cy.get('body > nav > div.nav-links > a:nth-child(3)').click();
         cy.get('body > main > div.petsandshelter > a').click();
-
-        cy.get('body > main > div > div:nth-child(1) > div.message-body > div.message-actions > button:nth-child(3)').click();
-
-        cy.contains('Message has been deleted.').should('be.visible');
+        cy.get('body > main > div > div:nth-child(1) > div.message-body > div.message-actions > button:nth-child(1)').click();
+        cy.get('input[type="submit"][name="submit"]').click();
+        cy.contains('Updated Message').should('be.visible');
     });
 
 });

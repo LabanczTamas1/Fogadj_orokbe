@@ -90,7 +90,7 @@ class PetControllerTest extends TestCase
         $controller = new PetController();
         $result = $controller->insertPet($arr);
 
-        $this->assertTrue($result);c
+        $this->assertTrue($result);
     }
 
     public function testSlugGeneration()
