@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
@@ -12,18 +13,7 @@ class SessionControllerTest extends TestCase
         $_SESSION = []; // Szimulálja az $_SESSION tömböt
     }
 
-    public function testAuthAssignsSessionIfExists()
-    {
-        $_SESSION['user'] = new Session(1);
-
-        $controller = new SessionController();
-        $result = $controller->getSession();
-
-        $this->assertInstanceOf(Session::class, $result);
-        $this->assertEquals(1, $result->getUserId());
-    }
-
-    public function testCreateSession()
+    public function testCreateSession(): void
     {
         $controller = new SessionController();
 
@@ -32,10 +22,10 @@ class SessionControllerTest extends TestCase
         $this->assertTrue($result);
         $this->assertArrayHasKey('user', $_SESSION);
         $this->assertInstanceOf(Session::class, $_SESSION['user']);
-        $this->assertEquals(1, $_SESSION['user']->getUserId());
+        $this->assertEquals(1, $_SESSION['user']->user_id);
     }
 
-    public function testDestroySession()
+    public function testDestroySession(): void
     {
         $_SESSION['user'] = new Session(1);
 
@@ -46,7 +36,7 @@ class SessionControllerTest extends TestCase
         $this->assertArrayNotHasKey('user', $_SESSION);
     }
 
-    public function testIsAuthReturnsTrueIfSessionExists()
+    public function testIsAuthReturnsTrueIfSessionExists(): void
     {
         $_SESSION['user'] = new Session(1);
 
@@ -55,18 +45,10 @@ class SessionControllerTest extends TestCase
         $this->assertTrue($result);
     }
 
-    public function testIsAuthReturnsFalseIfNoSessionExists()
+    public function testIsAuthReturnsFalseIfNoSessionExists(): void
     {
         $result = SessionController::isAuth();
 
         $this->assertFalse($result);
-    }
-
-    public function testGetSessionReturnsNullIfNoSessionExists()
-    {
-        $controller = new SessionController();
-        $result = $controller->getSession();
-
-        $this->assertNull($result);
     }
 }

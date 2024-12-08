@@ -1,6 +1,9 @@
 <?php
 function shelter_card(array $array)
 {
+    if(empty($array["count"])){
+        $array["count"] = "Nincsen kisállat!";
+    }
 ?>
     <div class="shelter-card" >
         <img src="/../../files/shelter_image/<?=$array['img']?>" alt="<?=$array['shelter_name']?>" onclick="document.navigateTo('/shelters/<?= $array['slug'] ?>')">

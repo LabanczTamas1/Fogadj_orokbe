@@ -6,46 +6,51 @@ use App\Session;
 
 class SessionController
 {
-
-    private Session $session;
+    private ?Session $session = null; // Alapértelmezett érték null
 
     public function __construct()
     {
         session_start();
-
         $this->auth();
     }
 
-    public function auth()
+    public function auth(): void
     {
+        // Ellenőrizzük, hogy létezik-e a 'user' kulcs
         if (isset($_SESSION["user"])) {
             $this->session = $_SESSION["user"];
         }
     }
 
-    public function create($user_id)
+    public function create(int $user_id): bool
     {
-        $_SESSION["user"] = new Session($user_id, );
-        
+        // Új session létrehozása
+        $_SESSION["user"] = new Session($user_id);
+        $this->session = $_SESSION["user"]; // Az aktuális session beállítása
+
         return true;
     }
 
-
-    public function destroy()
+    public function destroy(): bool
     {
-        if (isset($_SESSION["user"]))
+        // Aktív session törlése
+        if (isset($_SESSION["user"])) {
             unset($_SESSION["user"]);
+        }
+        $this->session = null; // Session null-ra állítása
 
         return true;
     }
 
-    public static function isAuth()
+    public static function isAuth(): bool
     {
+        // Ellenőrizzük, hogy a felhasználó autentikált-e
         return isset($_SESSION["user"]);
     }
 
-    public function getSession()
+    public function getSession(): ?Session
     {
+        // Visszatérünk az aktuális session-nel vagy null-lal
         return $this->session;
     }
 }

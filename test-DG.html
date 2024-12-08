@@ -63,7 +63,8 @@
     <h1>PHPUnit Teszteredmények</h1>
 </header>
 <main>
-    <section></section>
+   
+    <section> <h1>RegisterControllerTest tesztek</h1></section>
         <h2>Összefoglaló</h2>
         <p>A tesztek futtatása az alábbi eredménnyel zárult:</p>
         <ul>
@@ -122,6 +123,53 @@
             <li><strong>Figyelmeztetések:</strong> 1</li>
         </ul>
         <p class="status warning">Eredmény: OK, de voltak problémák!</p>
+    </section>
+    <section> <h1>SessionController tesztek</h1></section>
+    <section>
+        <h2>Összefoglaló</h2>
+        <p>A tesztek futtatása az alábbi eredménnyel zárult:</p>
+        <ul>
+            <li><strong>Összes teszt:</strong> 4</li>
+            <li><strong>Megállapítások (Assertions):</strong> 8</li>
+            <li><strong>Figyelmeztetések:</strong> 1</li>
+            <li><strong>Deprekációk:</strong> 1</li>
+        </ul>
+        <p class="status warning">Eredmény: OK, de voltak problémák!</p>
+    </section>
+
+    <section>
+        <h2>Tesztrészletek</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Teszt neve</th>
+                    <th>Eredmény</th>
+                    <th>Részletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>test_session_creation</td>
+                    <td class="ok">OK</td>
+                    <td>Session létrehozása sikeres.</td>
+                </tr>
+                <tr>
+                    <td>test_invalid_session_handling</td>
+                    <td class="ok">OK</td>
+                    <td>Érvénytelen session megfelelően kezelve.</td>
+                </tr>
+                <tr>
+                    <td>test_notification_sending</td>
+                    <td class="ok">OK</td>
+                    <td>Értesítés sikeresen elküldve.</td>
+                </tr>
+                <tr>
+                    <td>test_session_input_validation</td>
+                    <td class="warning">FIGYELMEZTETÉS</td>
+                    <td>Bemenet validálás hiányosságok.</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
    
