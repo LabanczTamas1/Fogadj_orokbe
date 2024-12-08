@@ -19,18 +19,24 @@ class LoginController {
                 if ($session->create($concrateUser -> id)) {
                     Tools::FlashMessage('Sikeres bejelentkezés! Üdv ' . $concrateUser -> fullname, 'success');
                     if($concrateUser->type === 'User'){
+                        session_write_close();
                         $this->redirect("/pages/chooseOption");
                     }else{
+                        session_write_close();
                         $this->redirect("/");
                     }
                 };
             } else {
                 $wrongpassword = "Nem megfelelő a jelszó!";
                 Tools::FlashMessage($wrongpassword, 'danger');
+                session_write_close();
+                $this->redirect("/");
             }
         } else {
             $wrongusername = "Nincsen ilyen felhasználó!";
             Tools::FlashMessage($wrongusername, 'danger');
+            session_write_close();
+            $this->redirect("/");
         }
      
     }

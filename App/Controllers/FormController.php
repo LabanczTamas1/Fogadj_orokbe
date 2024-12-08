@@ -61,10 +61,12 @@ class FormController
                 $this->redirect("/user/messages");
             } else {
                 Tools::FlashMessage("Az üzenet frissítése nem sikerült.", 'danger');
+                session_write_close();
                 $this->redirect("/user/messages");
             }
         } catch (\Exception $e) {
             Tools::FlashMessage("Kivétel történt: " . $e->getMessage(), 'danger');
+            session_write_close();
             $this->redirect("/user/messages");
         }
     }

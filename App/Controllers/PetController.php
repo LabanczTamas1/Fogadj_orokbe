@@ -28,7 +28,7 @@ class PetController {
             if ($pet->save()) {
                 Tools::FlashMessage($data['postname'] . ' hozzáadva', 'success');
                 session_write_close(); 
-                header("Location: /");
+                $this->redirect("/");
                 exit;
             }
         } catch (\Exception $e) {
@@ -75,6 +75,7 @@ class PetController {
             }
         } catch (\Exception $e) {
             Tools::FlashMessage( ' Something went wrong', 'danger');
+            session_write_close();
             $this->redirect("/");
             die();
         }

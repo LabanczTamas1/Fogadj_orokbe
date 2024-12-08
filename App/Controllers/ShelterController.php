@@ -61,11 +61,13 @@ class ShelterController {
         try {
             if ($shelter->update()) {
                 Tools::FlashMessage($shelter->shelter_name . ' módosítva', 'success');
-                header("Location: /");
+                session_write_close();
+                $this->redirect("/");
             }
         } catch (\Exception $e) {
             Tools::FlashMessage("Something went wrong ".$e,"danger");
-            header("Location: /");
+            session_write_close();
+            $this->redirect("/");
         }
     }
     
