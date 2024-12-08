@@ -13,15 +13,16 @@ require_once '../views/components/shelterCard.php';
 ?>
 
 
-<div class="container-pet">
-<?= $pet->postname;?>
-<?= $pet->pet_name;?>
-<?= $pet->pet_gender;?>
-<?= $pet->pet_breed;?>
-<?= $pet->pet_age;?>
-<?= $pet->description;?>
-<?= $pet->postname;?>
-<img src="<?= '../files/pet_image/'.$pet->img;?>." alt="">
+<div class="container-pet" style="background-color: #305C60; height: 80vh !important;">
+<img src="<?= '../files/pet_image/'.$pet->img;?>." style="height: 70% !important;" alt="">
+<div style="padding: 1rem;">
+<div style="color: white; font-size: 2rem;"><?= $pet->pet_name;?></div>
+<div style="color: white; font-size: 1rem;">Nem: <?= $pet->pet_gender;?></div>
+<div style="color: white; font-size: 1rem;">Faj: <?= $pet->pet_breed;?></div>
+<div style="color: white; font-size: 1rem;">Életkor: <?= $pet->pet_age;?></div>
+<div style="color: white; font-size: 1rem;">Leírása: <?= $pet->description;?></div>
+</div>
+
 </div>
 <hr>
 <div class="container">
