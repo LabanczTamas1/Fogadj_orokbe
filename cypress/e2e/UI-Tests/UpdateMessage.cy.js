@@ -128,7 +128,7 @@ describe('Check message', () => {
         cy.get('body > main > div.petsandshelter > a').click();
         cy.get('body > main > div > div:nth-child(1) > div.message-body > div.message-actions > button:nth-child(1)').click();
         cy.get('input[type="submit"][name="submit"]').click();
-        cy.contains('Updated Message').should('be.visible');
+        cy.contains('Üzenet sikeresen frissítve.').should('be.visible');
     });
 
 });

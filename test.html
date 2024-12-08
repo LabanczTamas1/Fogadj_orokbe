@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHPUnit Teszteredmények</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #6c63ff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #6c63ff;
+            color: white;
+        }
+        .status {
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .ok {
+            background-color: #4caf50;
+        }
+        .warning {
+            background-color: #ff9800;
+        }
+        .deprecation {
+            background-color: #ff5722;
+        }
+        .risky {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>PHPUnit Teszteredmények</h1>
+</header>
+<main>
+    <section></section>
+        <h2>Összefoglaló</h2>
+        <p>A tesztek futtatása az alábbi eredménnyel zárult:</p>
+        <ul>
+            <li><strong>Összes teszt:</strong> 5</li>
+            <li><strong>Megállapítások (Assertions):</strong> 13</li>
+            <li><strong>Figyelmeztetések:</strong> 1</li>
+        </ul>
+        <p class="status warning">Eredmény: OK, de voltak problémák!</p>
+    </section>
+
+    <section>
+        <h2>Tesztrészletek</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Teszt neve</th>
+                    <th>Eredmény</th>
+                    <th>Részletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>test_it_creates_a_user_successfully</td>
+                    <td class="ok">OK</td>
+                    <td>Felhasználó sikeresen létrehozva.</td>
+                </tr>
+                <tr>
+                    <td>test_it_handles_invalid_input</td>
+                    <td class="ok">OK</td>
+                    <td>Hibás bemenet megfelelően kezelve.</td>
+                </tr>
+                <tr>
+                    <td>test_it_sends_notification_on_user_creation</td>
+                    <td class="ok">OK</td>
+                    <td>Értesítés sikeresen elküldve.</td>
+                </tr>
+                <tr>
+                    <td>test_it_validates_email_format</td>
+                    <td class="warning">FIGYELMEZTETÉS</td>
+                    <td>A teszt feltétel érvényesítése hiányzik.</td>
+                </tr>
+                <tr>
+                    <td>test_it_deletes_a_user</td>
+                    <td class="ok">OK</td>
+                    <td>Felhasználó sikeresen törölve.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Összefoglaló</h2>
+        <p>A tesztek futtatása az alábbi eredményekkel zárult:</p>
+        <ul>
+            <li><strong>Összes teszt:</strong> 5</li>
+            <li><strong>Megállapítások (Assertions):</strong> 13</li>
+            <li><strong>Figyelmeztetések:</strong> 1</li>
+        </ul>
+        <p class="status warning">Eredmény: OK, de voltak problémák!</p>
+    </section>
+
+    <section>
+        <h2>LoginControllerTest Teszteredmények</h2>
+        <ul>
+            <li><strong>Összes teszt:</strong> 3</li>
+            <li><strong>Megállapítások (Assertions):</strong> 2</li>
+            <li><strong>Deprecated tesztek:</strong> 4</li>
+            <li><strong>Risky tesztek:</strong> 1</li>
+        </ul>
+        <p class="status risky">Eredmény: OK, de voltak problémák!</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Teszt neve</th>
+                    <th>Eredmény</th>
+                    <th>Részletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>testSuccessfulLogin</td>
+                    <td class="ok">OK</td>
+                    <td>Sikeres bejelentkezés tesztelve.</td>
+                </tr>
+                <tr>
+                    <td>testFailedLoginWrongPassword</td>
+                    <td class="deprecation">DEPRECATED</td>
+                    <td>A teszt figyelmeztetést generált.</td>
+                </tr>
+                <tr>
+                    <td>testFailedLoginUserNotFound</td>
+                    <td class="risky">RISKY</td>
+                    <td>A teszt részben lefedetlen vagy instabil.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
