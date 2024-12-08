@@ -39,8 +39,9 @@ class RegisterController
         $this->user= new User($data);
         if ($this->user->save()) {
             Tools::FlashMessage("Successful registration!", 'success');
-                $this->redirect("/userhandle/login");
-                return true;
+            session_write_close();  
+            $this->redirect("/userhandle/login");
+            return true;
            
         } else {
             Tools::FlashMessage("Error occurred during registration.", 'danger');

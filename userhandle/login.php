@@ -23,7 +23,7 @@ if (isset($_POST["userlogin"])) {
             <input type="password" name="passwd" id="passwd_value" placeholder="Jelszó" required>
         </div>
         <button type="submit" class="sign-button" name="userlogin">Bejelentkezés</button>
-        <div class="linky">
+        <div class="linky" style="width:200px!important">
             <a href="register.php">Regisztráció</a>
         </div>
     </form>

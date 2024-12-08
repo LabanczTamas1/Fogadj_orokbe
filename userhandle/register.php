@@ -32,7 +32,7 @@ if (isset($_POST["regist"])) {
         <button type="submit" class="sign-button" name="regist">Regisztráció</button>
     </div>
     
-    <div class="linky">
+    <div class="linky" style="width:200px!important">
         <a href="login.php">Bejelentkezés</a>
     </div>
 </form>

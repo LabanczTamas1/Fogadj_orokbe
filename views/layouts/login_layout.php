@@ -15,12 +15,7 @@
   </header>
 
   <?php
-    // Check if 'action' parameter is set, and load the correct component
-   // if (isset($_GET['action']) && $_GET['action'] === 'signup') {
-     //   include __DIR__ . '/../components/signup.php'; // Load signup component
-    //} else {
-      //  include __DIR__ . '/../components/login.php'; // Default to loading login component
-    //}
+   
 
   ?>
   <main class="container">
